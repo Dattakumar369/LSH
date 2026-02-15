@@ -80,7 +80,7 @@ public class SearchServlet extends HttpServlet {
 
 **What Happens:**
 1. You type "laptop" in search box and click "Search"
-2. Browser sends GET request: `/search?q=laptop&category=electronics&maxPrice=50000`
+2. Browser sends GET request: \`/search?q=laptop&category=electronics&maxPrice=50000\`
 3. Servlet extracts search parameters
 4. Servlet queries database for matching products
 5. Servlet forwards results to JSP page

@@ -160,7 +160,7 @@ Defines how Java objects map to database tables. Can be done via XML or annotati
    - Track order → Hibernate loads order with all related data
 
 **Without Hibernate:** Developers write 100+ lines of JDBC code for each operation.
-**With Hibernate:** Just `session.save(order)` - done!
+**With Hibernate:** Just \`session.save(order)\` - done!
 
 ### Scenario 2: Social Media Platform (Facebook, Instagram)
 
