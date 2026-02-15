@@ -13,6 +13,23 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // This script restores the original URL from the query string
+      // so React Router can handle the route correctly
+      (function(l) {
+        if (l.search[1] === '/') {
+          var basePath = '/coretocloud';
+          // Decode the path from query string
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          // Restore the full path: /coretocloud/tutorial/java-introduction
+          var restoredPath = basePath + decoded;
+          window.history.replaceState(null, null, restoredPath + l.hash);
+        }
+      }(window.location))
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
