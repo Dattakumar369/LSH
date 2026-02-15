@@ -2177,12 +2177,31 @@ code {
   display: block;
   text-align: center;
   margin: 1rem 0;
+  min-height: 0; /* No reserved space until ad loads */
+  overflow: hidden;
+  transition: min-height 0.3s ease;
+}
+
+.adsense-container.ad-loading {
+  min-height: 0;
+  opacity: 0;
+}
+
+.adsense-container.ad-loaded {
+  opacity: 1;
+}
+
+/* Hide container if ad fails to load */
+.adsense-container:empty,
+.adsense-container[style*="display: none"] {
+  display: none !important;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
 }
 
 .adsense-placeholder {
-  display: block;
-  text-align: center;
-  margin: 1rem 0;
+  display: none; /* Don't show placeholders in production */
 }
 
 /* Top Banner Ad */
@@ -2244,7 +2263,11 @@ code {
   display: block;
   width: 100%;
   max-width: 728px;
-  min-height: 90px;
+  min-height: 0; /* No reserved space - ad will set its own height */
+}
+
+.banner-ad-unit.ad-loaded {
+  min-height: auto;
 }
 
 /* Responsive Ad Styles */
@@ -2265,7 +2288,7 @@ code {
   
   .banner-ad-unit {
     max-width: 100%;
-    min-height: 50px;
+    min-height: 0; /* No reserved space on mobile */
   }
 }
 
@@ -2273,12 +2296,24 @@ code {
 .adsbygoogle {
   display: block !important;
   margin: 0 auto;
+  min-height: 0 !important; /* No reserved space */
 }
 
 /* Ensure ads don't break layout */
 .adsense-container ins {
   display: block;
   text-align: center;
+  min-height: 0;
+}
+
+/* Hide empty ad containers */
+.adsense-container:has(ins[data-adsbygoogle-status="unfilled"]),
+.adsense-container:has(ins[data-adsbygoogle-status="error"]) {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
 }
 
 /* ============================================

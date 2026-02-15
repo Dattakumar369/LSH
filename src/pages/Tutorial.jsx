@@ -362,7 +362,7 @@ function Tutorial() {
           adSlot={ADSENSE_CONFIG.adSlots.inContentTop}
           adFormat="horizontal"
           className="in-content-ad-unit"
-          style={{ margin: '2rem auto', maxWidth: '728px', minHeight: '90px' }}
+          style={{ margin: '2rem auto', maxWidth: '728px' }}
         />
       </div>
 
@@ -484,7 +484,7 @@ function Tutorial() {
           adSlot={ADSENSE_CONFIG.adSlots.inContentBottom}
           adFormat="horizontal"
           className="in-content-ad-unit"
-          style={{ margin: '2rem auto', maxWidth: '728px', minHeight: '90px' }}
+          style={{ margin: '2rem auto', maxWidth: '728px' }}
         />
       </div>
 

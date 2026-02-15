@@ -249,7 +249,7 @@ function Layout() {
             adSlot={ADSENSE_CONFIG.adSlots.sidebar}
             adFormat="rectangle"
             className="sidebar-ad-unit"
-            style={{ margin: '1rem', minHeight: '250px' }}
+            style={{ margin: '1rem' }}
           />
         </div>
       </aside>
@@ -260,7 +260,7 @@ function Layout() {
           adSlot={ADSENSE_CONFIG.adSlots.topBanner}
           adFormat="horizontal"
           className="banner-ad-unit"
-          style={{ margin: '1rem auto', maxWidth: '728px', minHeight: '90px' }}
+          style={{ margin: '1rem auto', maxWidth: '728px' }}
         />
       </div>
 
@@ -275,7 +275,7 @@ function Layout() {
           adSlot={ADSENSE_CONFIG.adSlots.bottomBanner}
           adFormat="horizontal"
           className="banner-ad-unit"
-          style={{ margin: '1rem auto', maxWidth: '728px', minHeight: '90px' }}
+          style={{ margin: '1rem auto', maxWidth: '728px' }}
         />
       </div>
 
@@ -327,7 +327,7 @@ function Layout() {
             <ul>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><a href="https://github.com/Dattakumar369/learnstackhub" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://github.com/Dattakumar369/coretocloud" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
           

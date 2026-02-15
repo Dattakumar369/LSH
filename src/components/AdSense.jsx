@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ADSENSE_CONFIG, isAdSenseConfigured } from '../config/adsense';
 
 function AdSense({ 
@@ -6,11 +6,14 @@ function AdSense({
   adFormat = 'auto',
   adLayout = '',
   fullWidthResponsive = true,
-  style = { display: 'block' },
+  style = {},
   className = '',
   adClient = ADSENSE_CONFIG.publisherId
 }) {
   const adRef = useRef(null);
+  const containerRef = useRef(null);
+  const [adLoaded, setAdLoaded] = useState(false);
+  const [adFailed, setAdFailed] = useState(false);
 
   useEffect(() => {
     try {
@@ -19,36 +22,85 @@ function AdSense({
       }
     } catch (err) {
       console.error('AdSense error:', err);
+      setAdFailed(true);
     }
   }, []);
 
+  // Monitor ad loading status
+  useEffect(() => {
+    if (!adRef.current || !isAdSenseConfigured()) return;
+
+    const checkAdStatus = () => {
+      const status = adRef.current?.getAttribute('data-adsbygoogle-status');
+      if (status === 'done') {
+        setAdLoaded(true);
+        // Check if ad actually rendered content (has height)
+        setTimeout(() => {
+          const iframe = adRef.current?.querySelector('iframe');
+          if (iframe && iframe.offsetHeight > 0) {
+            setAdLoaded(true);
+          } else {
+            // Ad slot filled but no content - likely no ads available
+            setAdFailed(true);
+          }
+        }, 500);
+      } else if (status === 'error' || status === 'unfilled') {
+        setAdFailed(true);
+      }
+    };
+
+    // Check immediately
+    checkAdStatus();
+
+    // Set up observer to watch for status changes
+    const observer = new MutationObserver(checkAdStatus);
+    if (adRef.current) {
+      observer.observe(adRef.current, {
+        attributes: true,
+        attributeFilter: ['data-adsbygoogle-status']
+      });
+    }
+
+    // Timeout fallback - if ad doesn't load in 5 seconds, consider it failed
+    const timeout = setTimeout(() => {
+      if (!adLoaded && !adFailed) {
+        setAdFailed(true);
+      }
+    }, 5000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
+  }, [adLoaded, adFailed]);
+
   // Don't render if AdSense is not configured
   if (!isAdSenseConfigured()) {
-    return (
-      <div className={`adsense-placeholder ${className}`} style={style}>
-        <div style={{
-          padding: '20px',
-          background: '#f3f4f6',
-          border: '2px dashed #d1d5db',
-          borderRadius: '8px',
-          textAlign: 'center',
-          color: '#6b7280',
-          fontSize: '0.9rem'
-        }}>
-          Ad Space
-          <br />
-          <small>Configure AdSense client ID in AdSense component</small>
-        </div>
-      </div>
-    );
+    return null; // Don't show placeholder in production
+  }
+
+  // Hide container if ad failed to load (no empty space)
+  if (adFailed) {
+    return null;
   }
 
   return (
-    <div className={`adsense-container ${className}`} style={style}>
+    <div 
+      ref={containerRef}
+      className={`adsense-container ${className} ${adLoaded ? 'ad-loaded' : 'ad-loading'}`} 
+      style={{
+        ...style,
+        minHeight: adLoaded ? 'auto' : '0',
+        display: adFailed ? 'none' : 'block'
+      }}
+    >
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ 
+          display: 'block',
+          minHeight: adLoaded ? 'auto' : '0'
+        }}
         data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}

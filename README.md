@@ -39,14 +39,14 @@ The application is configured for automatic deployment to GitHub Pages using Git
 ### Automatic Deployment (Recommended)
 
 1. **Enable GitHub Pages in your repository:**
-   - Go to your repository: `https://github.com/Dattakumar369/learnstackhub`
+   - Go to your repository: `https://github.com/Dattakumar369/coretocloud`
    - Navigate to **Settings** → **Pages**
    - Under **Source**, select **GitHub Actions**
 
 2. **Push to main branch:**
    - The GitHub Actions workflow will automatically build and deploy your site
    - Every push to the `main` branch will trigger a new deployment
-   - Your site will be available at: `https://dattakumar369.github.io/learnstackhub/`
+   - Your site will be available at: `https://dattakumar369.github.io/coretocloud/`
 
 ### Manual Deployment
 
@@ -63,8 +63,8 @@ npm run deploy
 
 ### Configuration
 
-- **Base Path**: `/learnstackhub/` (configured in `vite.config.js`)
-- **Router Basename**: `/learnstackhub` (configured in `src/App.jsx`)
+- **Base Path**: `/coretocloud/` (configured in `vite.config.js`)
+- **Router Basename**: `/coretocloud` (configured in `src/App.jsx`)
 - **Workflow File**: `.github/workflows/deploy.yml`
 
 ## 🎓 Learning Path
