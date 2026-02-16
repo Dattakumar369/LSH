@@ -4,7 +4,7 @@
 export const ADSENSE_CONFIG = {
   // Your AdSense Publisher ID (from AdSense dashboard)
   // Format: ca-pub-XXXXXXXXXX
-  publisherId: 'ca-pub-XXXXXXXXXXXXXXXX',
+  publisherId: 'ca-pub-2176490979231754',
   
   // Ad Slot IDs (create these in your AdSense dashboard)
   adSlots: {
