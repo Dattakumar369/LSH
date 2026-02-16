@@ -2802,6 +2802,15 @@ code {
   clear: both;
 }
 
+@media (max-width: 1200px) {
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -2875,5 +2884,7 @@ code {
   
   .site-footer {
     padding: 2rem 1rem 1rem;
+    margin-left: 0;
+    width: 100%;
   }
 }

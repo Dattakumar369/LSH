@@ -164,7 +164,7 @@ function PrivacyPolicy() {
             If you have any questions about this Privacy Policy, please contact us:
           </p>
           <ul>
-            <li>Email: <a href="mailto:contact@learnstackhub.com">contact@learnstackhub.com</a></li>
+            <li>Email: <a href="mailto:dattudattakumar369@gmail.com">dattudattakumar369@gmail.com</a></li>
             <li>Website: <Link to="/contact">Contact Page</Link></li>
           </ul>
         </section>

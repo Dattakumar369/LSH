@@ -351,10 +351,14 @@ function Layout() {
             <h4>Learn</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
+              <li><Link to="/tutorial/html-introduction">HTML</Link></li>
+              <li><Link to="/tutorial/css-introduction">CSS</Link></li>
               <li><Link to="/tutorial/java-introduction">Core Java</Link></li>
+              <li><Link to="/tutorial/mysql-introduction">MySQL</Link></li>
               <li><Link to="/tutorial/jdbc-introduction">JDBC</Link></li>
               <li><Link to="/tutorial/servlet-introduction">Servlets</Link></li>
               <li><Link to="/tutorial/jsp-introduction">JSP</Link></li>
+              <li><Link to="/tutorial/hibernate-introduction">Hibernate</Link></li>
             </ul>
           </div>
           
@@ -363,7 +367,6 @@ function Layout() {
             <ul>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><a href="https://github.com/Dattakumar369/learnstackhub" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
           

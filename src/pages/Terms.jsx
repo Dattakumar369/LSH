@@ -139,6 +139,28 @@ function Terms() {
         </section>
 
         <section style={{ marginBottom: '2.5rem' }}>
+          <h2>Advertising and Third-Party Services</h2>
+          <p>
+            Our Site may display advertisements provided by third-party advertising services, including Google AdSense. 
+            These advertisements may be personalized based on your browsing history and interests.
+          </p>
+          <p>
+            We use Google AdSense to serve advertisements on our Site. Google AdSense uses cookies and similar technologies 
+            to provide personalized advertising. By using our Site, you consent to the use of cookies for advertising purposes.
+          </p>
+          <p>
+            You can opt out of personalized advertising by visiting 
+            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer"> Google's Ads Settings</a> 
+            or by adjusting your browser settings to refuse cookies.
+          </p>
+          <p>
+            We are not responsible for the content of advertisements displayed on our Site, nor do we endorse the products 
+            or services advertised. Advertisements are provided by third-party advertising networks and are subject to their 
+            own terms and privacy policies.
+          </p>
+        </section>
+
+        <section style={{ marginBottom: '2.5rem' }}>
           <h2>Links to Third-Party Sites</h2>
           <p>
             Our Site may contain links to third-party websites or services that are not owned or controlled by LearnStackHub.
@@ -175,7 +197,7 @@ function Terms() {
             If you have any questions about these Terms of Service, please contact us:
           </p>
           <ul>
-            <li>Email: <a href="mailto:contact@learnstackhub.com">contact@learnstackhub.com</a></li>
+            <li>Email: <a href="mailto:dattudattakumar369@gmail.com">dattudattakumar369@gmail.com</a></li>
             <li>Website: <Link to="/contact">Contact Page</Link></li>
           </ul>
         </section>
