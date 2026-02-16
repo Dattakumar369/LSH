@@ -58,8 +58,8 @@ function Contact() {
               Email
             </h3>
             <p>
-              <a href="mailto:contact@learnstackhub.com" style={{ color: 'var(--accent-primary)' }}>
-                contact@learnstackhub.com
+              <a href="mailto:dattudattakumar369@gmail.com" style={{ color: 'var(--accent-primary)' }}>
+                dattudattakumar369@gmail.com
               </a>
             </p>
           </div>

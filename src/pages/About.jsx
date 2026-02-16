@@ -107,21 +107,41 @@ function About() {
 
         <section style={{ marginBottom: '3rem' }}>
           <h2>Our Learning Path</h2>
-          <p>LearnStackHub follows a structured learning path designed to build your skills progressively:</p>
-          <ol style={{ paddingLeft: '1.5rem' }}>
-            <li style={{ marginBottom: '1rem' }}>
+          <p>
+            LearnStackHub offers a comprehensive and ever-expanding curriculum designed to build your skills progressively. 
+            Our learning path covers everything from the fundamentals to advanced topics, with new tutorials being added regularly 
+            to keep up with industry trends and technologies.
+          </p>
+          <p style={{ marginTop: '1rem' }}>
+            Currently, we cover:
+          </p>
+          <ul style={{ paddingLeft: '1.5rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}>
+              <strong>HTML & CSS:</strong> Build the foundation of web development with modern HTML5 and CSS3
+            </li>
+            <li style={{ marginBottom: '0.75rem' }}>
               <strong>Core Java:</strong> Master the fundamentals - variables, OOP, collections, multithreading, and more
             </li>
-            <li style={{ marginBottom: '1rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}>
               <strong>JDBC:</strong> Learn database connectivity with Java Database Connectivity
             </li>
-            <li style={{ marginBottom: '1rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}>
+              <strong>MySQL:</strong> Comprehensive database management and SQL queries
+            </li>
+            <li style={{ marginBottom: '0.75rem' }}>
               <strong>Servlets:</strong> Build dynamic web applications with Java Servlets
             </li>
-            <li style={{ marginBottom: '1rem' }}>
+            <li style={{ marginBottom: '0.75rem' }}>
               <strong>JSP:</strong> Create powerful server-side web pages with JavaServer Pages
             </li>
-          </ol>
+            <li style={{ marginBottom: '0.75rem' }}>
+              <strong>Hibernate:</strong> Master ORM (Object-Relational Mapping) for efficient database operations
+            </li>
+          </ul>
+          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
+            And we're constantly adding more! Our platform grows with your learning needs, covering new frameworks, 
+            tools, and best practices as they emerge in the industry.
+          </p>
         </section>
 
         <section style={{ marginBottom: '3rem' }}>
@@ -230,6 +250,20 @@ function About() {
           </p>
           <p style={{ marginTop: '1rem', fontWeight: '600', color: 'var(--accent-primary)' }}>
             Happy Learning! ☁️
+          </p>
+        </section>
+
+        <section style={{ 
+          marginTop: '3rem', 
+          paddingTop: '2rem', 
+          borderTop: '2px solid var(--border-color)',
+          textAlign: 'center'
+        }}>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+            Created with ❤️ by
+          </p>
+          <p style={{ fontSize: '1.2rem', fontWeight: '600', color: 'var(--accent-primary)' }}>
+            Dattakumar
           </p>
         </section>
       </div>
