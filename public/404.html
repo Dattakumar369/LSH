@@ -4,38 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LearnStackHub - Master Java Full Stack Development</title>
+  <!-- Meta refresh for crawlers (works for Googlebot) -->
+  <meta http-equiv="refresh" content="0;url=/index.html">
   <script>
     // Single Page Apps - Redirect 404s to index.html
     // This ensures React Router can handle all routes correctly
-    var l = window.location;
-    var path = l.pathname;
-    
-    // Remove leading slash if present
-    if (path.startsWith('/')) {
-      path = path.slice(1);
-    }
-    if (!path || path === '') {
-      path = '';
-    }
-    
-    // Build redirect to index.html with path in query string
-    var redirectPath = '/index.html';
-    if (path && path !== '') {
-      redirectPath += '?p=' + encodeURIComponent('/' + path);
-    }
-    if (l.search) {
-      redirectPath += (path ? '&' : '?') + l.search.slice(1);
-    }
-    if (l.hash) {
-      redirectPath += l.hash;
-    }
-    
-    // Redirect immediately
-    window.location.replace(redirectPath);
+    // Works for both browsers and crawlers
+    (function() {
+      var l = window.location;
+      var path = l.pathname;
+      var search = l.search;
+      var hash = l.hash;
+      
+      // Build redirect to index.html
+      var redirectPath = '/index.html';
+      
+      // Preserve the original path for React Router
+      if (path && path !== '/' && path !== '/index.html') {
+        // Store the path in sessionStorage for React Router to pick up
+        if (typeof sessionStorage !== 'undefined') {
+          sessionStorage.setItem('redirectPath', path + search + hash);
+        }
+      }
+      
+      // Redirect immediately
+      window.location.replace(redirectPath + search + hash);
+    })();
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <p>Redirecting to <a href="/index.html">home page</a>...</p>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/index.html">
+  </noscript>
 </body>
 </html>
 

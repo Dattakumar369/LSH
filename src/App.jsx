@@ -29,6 +29,19 @@ function AppWithTracking() {
     initGA();
   }, []);
 
+  // Handle redirects from 404.html
+  useEffect(() => {
+    // Check if we have a redirect path stored from 404.html
+    if (typeof sessionStorage !== 'undefined') {
+      const redirectPath = sessionStorage.getItem('redirectPath');
+      if (redirectPath) {
+        sessionStorage.removeItem('redirectPath');
+        // Navigate to the stored path
+        window.history.replaceState(null, null, redirectPath);
+      }
+    }
+  }, []);
+
   // Track page views on route changes
   usePageTracking();
 
