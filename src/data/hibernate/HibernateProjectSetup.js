@@ -12,21 +12,21 @@ This guide will walk you through creating a Hibernate project using **Maven** (m
 ## Prerequisites
 
 Before starting, ensure you have:
-- ✅ **Java JDK 11+** installed (recommended: JDK 17 or 21)
-- ✅ **Maven 3.6+** installed
-- ✅ **Eclipse IDE** or **IntelliJ IDEA** (with Maven support)
-- ✅ **MySQL Server** installed and running
+- **Java JDK 11+** installed (recommended: JDK 17 or 21)
+- **Maven 3.6+** installed
+- **Eclipse IDE** or **IntelliJ IDEA** (with Maven support)
+- **MySQL Server** installed and running
 
 ---
 
 ## Why Maven?
 
 **Maven is the modern standard** for Java projects:
-- ✅ **Automatic dependency management** - No manual JAR downloads
-- ✅ **Version compatibility** - Maven handles transitive dependencies
-- ✅ **Industry standard** - Used in all modern Java projects
-- ✅ **Easy updates** - Just change version numbers
-- ✅ **Build automation** - Compile, test, package with one command
+- **Automatic dependency management** - No manual JAR downloads
+- **Version compatibility** - Maven handles transitive dependencies
+- **Industry standard** - Used in all modern Java projects
+- **Easy updates** - Just change version numbers
+- **Build automation** - Compile, test, package with one command
 
 **Note:** Manual JAR file approach is outdated and not recommended for new projects.
 
@@ -365,10 +365,10 @@ public class HibernateUtil {
                     .addAnnotatedClass(Employee.class)
                     .buildSessionFactory();
             
-            System.out.println("✅ Hibernate SessionFactory created successfully!");
+            System.out.println("Hibernate SessionFactory created successfully!");
             
         } catch (Exception e) {
-            System.err.println("❌ Initial SessionFactory creation failed: " + e);
+            System.err.println("Initial SessionFactory creation failed: " + e);
             throw new ExceptionInInitializerError(e);
         }
     }
@@ -415,11 +415,11 @@ public class HibernateMain {
             System.out.println("\\n=== Creating Employee ===");
             Employee emp1 = new Employee("John Doe", "john@example.com", 50000.0);
             session.persist(emp1);
-            System.out.println("✅ Employee saved: " + emp1);
+            System.out.println("Employee saved: " + emp1);
             
             Employee emp2 = new Employee("Jane Smith", "jane@example.com", 60000.0);
             session.persist(emp2);
-            System.out.println("✅ Employee saved: " + emp2);
+            System.out.println("Employee saved: " + emp2);
             
             transaction.commit();
             
@@ -439,7 +439,7 @@ public class HibernateMain {
             if (emp != null) {
                 emp.setSalary(55000.0);
                 session.merge(emp);
-                System.out.println("✅ Employee updated: " + emp);
+                System.out.println("Employee updated: " + emp);
             }
             transaction.commit();
             
@@ -449,7 +449,7 @@ public class HibernateMain {
             Employee empToDelete = session.get(Employee.class, 2);
             if (empToDelete != null) {
                 session.remove(empToDelete);
-                System.out.println("✅ Employee deleted: " + empToDelete);
+                System.out.println("Employee deleted: " + empToDelete);
             }
             transaction.commit();
             
@@ -466,7 +466,7 @@ public class HibernateMain {
             if (transaction != null) {
                 transaction.rollback();
             }
-            System.err.println("❌ Error: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         } finally {
             session.close();
@@ -505,10 +505,10 @@ mvn clean compile exec:java -Dexec.mainClass="com.example.HibernateMain"
 
 ## Verify It Works
 
-1. ✅ **Check console:** "Hibernate SessionFactory created successfully!"
-2. ✅ **Check SQL queries:** Should see SQL being printed
-3. ✅ **Check database:** Table \`employees\` should be created automatically
-4. ✅ **Check CRUD operations:** All operations should execute successfully
+1. **Check console:** "Hibernate SessionFactory created successfully!"
+2. **Check SQL queries:** Should see SQL being printed
+3. **Check database:** Table \`employees\` should be created automatically
+4. **Check CRUD operations:** All operations should execute successfully
 
 ---
 
@@ -519,16 +519,16 @@ mvn clean compile exec:java -Dexec.mainClass="com.example.HibernateMain"
 **Error:** \`java.lang.ClassNotFoundException: jakarta.persistence.Entity\`
 
 **Solution:**
-- ✅ Add Jakarta Persistence API dependency in \`pom.xml\`
-- ✅ Use \`jakarta.persistence\` imports (not \`javax.persistence\`)
-- ✅ This is required for Hibernate 6.x
+- Add Jakarta Persistence API dependency in \`pom.xml\`
+- Use \`jakarta.persistence\` imports (not \`javax.persistence\`)
+- This is required for Hibernate 6.x
 
 ### Issue 2: NoSuchMethodError with Hibernate 6.x
 
 **Error:** Methods like \`save()\`, \`update()\`, \`delete()\` not found
 
 **Solution:**
-- ✅ Hibernate 6.x uses different method names:
+- Hibernate 6.x uses different method names:
   - \`save()\` → \`persist()\`
   - \`update()\` → \`merge()\`
   - \`delete()\` → \`remove()\`
@@ -536,17 +536,17 @@ mvn clean compile exec:java -Dexec.mainClass="com.example.HibernateMain"
 ### Issue 3: Maven Dependencies Not Downloading
 
 **Solution:**
-- ✅ Check internet connection
-- ✅ Verify Maven is installed: \`mvn -version\`
-- ✅ Update Maven: \`mvn clean install -U\`
-- ✅ Check \`pom.xml\` syntax
+- Check internet connection
+- Verify Maven is installed: \`mvn -version\`
+- Update Maven: \`mvn clean install -U\`
+- Check \`pom.xml\` syntax
 
 ### Issue 4: Connection Failed
 
 **Solution:**
-- ✅ Verify MySQL is running
-- ✅ Check database name, username, password in \`hibernate.cfg.xml\`
-- ✅ Verify connection URL format
+- Verify MySQL is running
+- Check database name, username, password in \`hibernate.cfg.xml\`
+- Verify connection URL format
 
 ---
 
@@ -592,20 +592,20 @@ mvn clean compile exec:java -Dexec.mainClass="com.example.HibernateMain"
 ## Summary
 
 **Steps to Create Hibernate Maven Project:**
-1. ✅ Create Maven project in IDE
-2. ✅ Add Hibernate dependencies in \`pom.xml\`
-3. ✅ Maven downloads all JAR files automatically
-4. ✅ Create \`hibernate.cfg.xml\` in \`src/main/resources/\`
-5. ✅ Create entity class with Jakarta annotations
-6. ✅ Create HibernateUtil class
-7. ✅ Create main class with CRUD operations
-8. ✅ Run and test
+1. Create Maven project in IDE
+2. Add Hibernate dependencies in \`pom.xml\`
+3. Maven downloads all JAR files automatically
+4. Create \`hibernate.cfg.xml\` in \`src/main/resources/\`
+5. Create entity class with Jakarta annotations
+6. Create HibernateUtil class
+7. Create main class with CRUD operations
+8. Run and test
 
 **Key Points:**
-- ✅ **Use Maven** - Modern standard, no manual JAR downloads
-- ✅ **Hibernate 6.x** - Latest version with Jakarta Persistence
-- ✅ **Current dependencies** - All versions are up-to-date (2024)
-- ✅ **Jakarta, not javax** - Hibernate 6.x uses \`jakarta.persistence\`
+- **Use Maven** - Modern standard, no manual JAR downloads
+- **Hibernate 6.x** - Latest version with Jakarta Persistence
+- **Current dependencies** - All versions are up-to-date (2024)
+- **Jakarta, not javax** - Hibernate 6.x uses \`jakarta.persistence\`
 
 **No JAR file downloads needed!** Maven handles everything automatically.
 
@@ -751,11 +751,11 @@ Maven:    mvn clean compile exec:java -Dexec.mainClass="com.example.HibernateMai
 
 // 8. MAVEN ADVANTAGES
 /*
-✅ Automatic dependency download
-✅ Version management
-✅ Transitive dependencies handled
-✅ Industry standard
-✅ No manual JAR file management
+Automatic dependency download
+Version management
+Transitive dependencies handled
+Industry standard
+No manual JAR file management
 */`
 };
 

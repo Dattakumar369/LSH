@@ -240,10 +240,10 @@ try {
 
 ### Benefits of Optimistic Locking
 
-✅ **Better Performance** - No database locks held
-✅ **Scalability** - Multiple users can read simultaneously
-✅ **No Deadlocks** - No locks to cause deadlocks
-✅ **Automatic** - Hibernate handles it
+**Better Performance** - No database locks held
+**Scalability** - Multiple users can read simultaneously
+**No Deadlocks** - No locks to cause deadlocks
+**Automatic** - Hibernate handles it
 
 ### When to Use Optimistic Locking
 
@@ -322,16 +322,16 @@ SELECT * FROM products WHERE id = 1 FOR UPDATE;
 
 ### Benefits of Pessimistic Locking
 
-✅ **Prevents Conflicts** - Guarantees no concurrent modifications
-✅ **Immediate Protection** - Lock held from read to commit
-✅ **Simple Logic** - No exception handling needed
+**Prevents Conflicts** - Guarantees no concurrent modifications
+**Immediate Protection** - Lock held from read to commit
+**Simple Logic** - No exception handling needed
 
 ### Drawbacks
 
-❌ **Performance Impact** - Locks held longer
-❌ **Deadlock Risk** - Can cause deadlocks
-❌ **Scalability** - Limits concurrent access
-❌ **Database Dependent** - Behavior varies by database
+**Performance Impact** - Locks held longer
+**Deadlock Risk** - Can cause deadlocks
+**Scalability** - Limits concurrent access
+**Database Dependent** - Behavior varies by database
 
 ### When to Use Pessimistic Locking
 

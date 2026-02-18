@@ -137,13 +137,13 @@ public class PaymentGateway {
                 
             default:
                 status = "FAILED";
-                System.out.println("   ❌ Invalid payment method!");
+                System.out.println("   Invalid payment method!");
         }
         
         if (!status.equals("FAILED")) {
             double netAmount = amount - processingFee;
             
-            System.out.println("\\n✅ PAYMENT PROCESSED");
+            System.out.println("\\nPAYMENT PROCESSED");
             System.out.println("====================");
             System.out.println("Processor: " + processor);
             System.out.println("Status: " + status);
@@ -327,8 +327,8 @@ public class GameMenu {
             case 5:
                 System.out.println("\\n🏆 ACHIEVEMENTS");
                 System.out.println("   Unlocked: 25/50");
-                System.out.println("   ✓ First Victory");
-                System.out.println("   ✓ Dragon Slayer");
+                System.out.println("   First Victory");
+                System.out.println("   Dragon Slayer");
                 System.out.println("   ○ Complete All Quests");
                 break;
                 
@@ -339,7 +339,7 @@ public class GameMenu {
                 break;
                 
             default:
-                System.out.println("\\n❌ Invalid option!");
+                System.out.println("\\nInvalid option!");
                 System.out.println("   Please select 1-6");
         }
     }
@@ -524,7 +524,7 @@ public class PaymentGateway {
             default:
                 status = "FAILED";
                 statusCode = "14";
-                System.out.println("→ ❌ Invalid Payment Method!");
+                System.out.println("→ Invalid Payment Method!");
         }
         
         // Risk assessment
@@ -533,7 +533,7 @@ public class PaymentGateway {
         
         switch (riskLevel) {
             case "LOW":
-                System.out.println("Risk Level: LOW ✓");
+                System.out.println("Risk Level: LOW");
                 System.out.println("Action: Auto-approve");
                 break;
             case "MEDIUM":

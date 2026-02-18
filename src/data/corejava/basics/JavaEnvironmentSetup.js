@@ -357,7 +357,7 @@ public class EnvironmentCheck {
         System.out.println("\\nMax Memory: " + (rt.maxMemory() / 1024 / 1024) + " MB");
         System.out.println("Processors: " + rt.availableProcessors());
         
-        System.out.println("\\n✓ Environment is configured correctly!");
+        System.out.println("\\nEnvironment is configured correctly!");
     }
 }`
     }

@@ -12,10 +12,10 @@ This guide will walk you through creating a Servlet project from scratch, settin
 ## Prerequisites
 
 Before starting, ensure you have:
-- ✅ **Java JDK 8+** installed
-- ✅ **Eclipse IDE** or **IntelliJ IDEA**
-- ✅ **Apache Tomcat 9.x** or **10.x** downloaded and extracted
-- ✅ **Servlet API JAR** (comes with Tomcat)
+- **Java JDK 8+** installed
+- **Eclipse IDE** or **IntelliJ IDEA**
+- **Apache Tomcat 9.x** or **10.x** downloaded and extracted
+- **Servlet API JAR** (comes with Tomcat)
 
 ---
 
@@ -46,9 +46,9 @@ apache-tomcat-9.0.xx/
 ├── bin/                    # Executable files (startup.sh, startup.bat)
 ├── conf/                   # Configuration files
 ├── lib/                    # ⭐ JAR FILES ARE HERE ⭐
-│   ├── servlet-api.jar     # ✅ This is what you need!
-│   ├── jsp-api.jar         # ✅ For JSP (if using JSP)
-│   ├── jasper.jar          # ✅ JSP compiler
+│   ├── servlet-api.jar     # This is what you need!
+│   ├── jsp-api.jar         # For JSP (if using JSP)
+│   ├── jasper.jar          # JSP compiler
 │   └── (other JAR files)
 ├── logs/                   # Log files
 ├── webapps/                # Deploy your WAR files here
@@ -79,9 +79,9 @@ C:\apache-tomcat-9.0.xx\lib\jsp-api.jar
 1. **Navigate to your Tomcat installation folder**
 2. **Open the \`lib\` folder**
 3. **Look for these files:**
-   - ✅ \`servlet-api.jar\` (required for Servlets)
-   - ✅ \`jsp-api.jar\` (required for JSP)
-   - ✅ \`jasper.jar\` (JSP compiler)
+   - \`servlet-api.jar\` (required for Servlets)
+   - \`jsp-api.jar\` (required for JSP)
+   - \`jasper.jar\` (JSP compiler)
 
 **If you see these files, you're ready!** These are the JAR files you need to add to your project.
 
@@ -189,8 +189,8 @@ If you still get compilation errors:
    - Linux/Mac: \`/opt/apache-tomcat-9.0.xx/lib/\`
    - *(Use your actual Tomcat installation path)*
 5. **Select the JAR files:**
-   - \`servlet-api.jar\` ✅
-   - \`jsp-api.jar\` (if using JSP) ✅
+   - \`servlet-api.jar\`
+   - \`jsp-api.jar\` (if using JSP)
 6. Click **Open**
 7. Click **Apply and Close**
 
@@ -372,8 +372,8 @@ C:\apache-tomcat-9.0.xx\lib\servlet-api.jar
    - Linux/Mac: \`/opt/apache-tomcat-9.0.xx/lib/\`
    - *(Use your actual Tomcat installation path)*
 5. **Select:**
-   - \`servlet-api.jar\` ✅
-   - \`jsp-api.jar\` (if using JSP) ✅
+   - \`servlet-api.jar\`
+   - \`jsp-api.jar\` (if using JSP)
 6. Click **OK**
 7. Select the module to add libraries to
 8. Click **OK**
@@ -617,8 +617,8 @@ MyFirstServlet/
 2. **Open Tomcat's \`lib\` folder:**
    - Navigate to: \`apache-tomcat-9.0.xx/lib/\`
    - You should see many JAR files including:
-     - ✅ \`servlet-api.jar\` (this is what you need!)
-     - ✅ \`jsp-api.jar\` (if using JSP)
+     - \`servlet-api.jar\` (this is what you need!)
+     - \`jsp-api.jar\` (if using JSP)
 
 3. **Copy the JAR files:**
    - Select \`servlet-api.jar\`
@@ -635,7 +635,7 @@ MyFirstServlet/
    └── WebContent/
        └── WEB-INF/
            └── lib/
-               └── servlet-api.jar  ✅ (should be here)
+               └── servlet-api.jar  (should be here)
    \`\`\`
 
 **Example paths:**
@@ -749,13 +749,13 @@ MyFirstServlet/
 ## Summary
 
 **Steps to Create Servlet Project:**
-1. ✅ Install Tomcat
-2. ✅ Create Dynamic Web Project
-3. ✅ Configure Tomcat in IDE
-4. ✅ Create Servlet class
-5. ✅ Write servlet code
-6. ✅ Run on server
-7. ✅ Test in browser
+1. Install Tomcat
+2. Create Dynamic Web Project
+3. Configure Tomcat in IDE
+4. Create Servlet class
+5. Write servlet code
+6. Run on server
+7. Test in browser
 
 **Key Files:**
 - \`web.xml\` - Deployment descriptor

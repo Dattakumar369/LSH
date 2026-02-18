@@ -12,10 +12,10 @@ This guide will walk you through creating a JDBC project, downloading MySQL Conn
 ## Prerequisites
 
 Before starting, ensure you have:
-- ✅ **Java JDK 8+** installed
-- ✅ **Eclipse IDE** or **IntelliJ IDEA**
-- ✅ **MySQL Server** installed and running
-- ✅ **MySQL Connector/J** JAR file (we'll download this)
+- **Java JDK 8+** installed
+- **Eclipse IDE** or **IntelliJ IDEA**
+- **MySQL Server** installed and running
+- **MySQL Connector/J** JAR file (we'll download this)
 
 ---
 
@@ -94,8 +94,8 @@ Before starting, ensure you have:
 
 1. **Expand your project** in Package Explorer
 2. **Look for:**
-   - \`Referenced Libraries\` → \`mysql-connector-j-8.0.xx.jar\` ✅
-   - Or \`lib/\` folder → \`mysql-connector-j-8.0.xx.jar\` ✅
+   - \`Referenced Libraries\` → \`mysql-connector-j-8.0.xx.jar\`
+   - Or \`lib/\` folder → \`mysql-connector-j-8.0.xx.jar\`
 
 ### Step 4: Create Database Connection Class
 
@@ -128,15 +128,15 @@ public class DatabaseConnection {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             
             if (connection != null) {
-                System.out.println("✅ Successfully connected to MySQL database!");
+                System.out.println("Successfully connected to MySQL database!");
             }
             
         } catch (ClassNotFoundException e) {
-            System.err.println("❌ MySQL JDBC Driver not found!");
+            System.err.println("MySQL JDBC Driver not found!");
             System.err.println("Make sure mysql-connector-j-8.0.xx.jar is in your classpath");
             e.printStackTrace();
         } catch (SQLException e) {
-            System.err.println("❌ Connection failed!");
+            System.err.println("Connection failed!");
             e.printStackTrace();
         }
         
@@ -185,8 +185,8 @@ CREATE TABLE users (
 1. **Right-click on \`DatabaseConnection.java\`**
 2. **Run As → Java Application**
 3. **Check console output:**
-   - ✅ "Successfully connected to MySQL database!" = Success!
-   - ❌ Error messages = Check configuration
+   - "Successfully connected to MySQL database!" = Success!
+   - Error messages = Check configuration
 
 ---
 
@@ -226,7 +226,7 @@ CREATE TABLE users (
 ### Step 3: Verify JAR File
 
 1. **Expand project** → **External Libraries**
-2. You should see: \`mysql-connector-j-8.0.xx.jar\` ✅
+2. You should see: \`mysql-connector-j-8.0.xx.jar\`
 
 ### Step 4: Create Database Connection Class
 
@@ -365,10 +365,10 @@ public class UserDAO {
             pstmt.setString(2, email);
             pstmt.executeUpdate();
             
-            System.out.println("✅ User created successfully!");
+            System.out.println("User created successfully!");
             
         } catch (SQLException e) {
-            System.err.println("❌ Error creating user: " + e.getMessage());
+            System.err.println("Error creating user: " + e.getMessage());
         }
     }
     
@@ -390,7 +390,7 @@ public class UserDAO {
             }
             
         } catch (SQLException e) {
-            System.err.println("❌ Error reading users: " + e.getMessage());
+            System.err.println("Error reading users: " + e.getMessage());
         }
         
         return users;
@@ -408,10 +408,10 @@ public class UserDAO {
             pstmt.setInt(3, id);
             pstmt.executeUpdate();
             
-            System.out.println("✅ User updated successfully!");
+            System.out.println("User updated successfully!");
             
         } catch (SQLException e) {
-            System.err.println("❌ Error updating user: " + e.getMessage());
+            System.err.println("Error updating user: " + e.getMessage());
         }
     }
     
@@ -425,10 +425,10 @@ public class UserDAO {
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
             
-            System.out.println("✅ User deleted successfully!");
+            System.out.println("User deleted successfully!");
             
         } catch (SQLException e) {
-            System.err.println("❌ Error deleting user: " + e.getMessage());
+            System.err.println("Error deleting user: " + e.getMessage());
         }
     }
 }
@@ -443,33 +443,33 @@ public class UserDAO {
 **Error:** \`java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver\`
 
 **Solution:**
-- ✅ **Verify JAR file is added to classpath**
-- ✅ **Check JAR file name** (should be mysql-connector-j-8.0.xx.jar)
-- ✅ **Refresh project** in IDE
-- ✅ **Rebuild project**
+- **Verify JAR file is added to classpath**
+- **Check JAR file name** (should be mysql-connector-j-8.0.xx.jar)
+- **Refresh project** in IDE
+- **Rebuild project**
 
 ### Issue 2: No Suitable Driver Found
 
 **Error:** \`No suitable driver found for jdbc:mysql://...\`
 
 **Solution:**
-- ✅ **Check URL format:** \`jdbc:mysql://localhost:3306/dbname\`
-- ✅ **Verify MySQL is running:** \`mysql -u root -p\`
-- ✅ **Check JAR file is in classpath**
-- ✅ **For MySQL 8.0+:** Use \`com.mysql.cj.jdbc.Driver\`
-- ✅ **For MySQL 5.x:** Use \`com.mysql.jdbc.Driver\`
+- **Check URL format:** \`jdbc:mysql://localhost:3306/dbname\`
+- **Verify MySQL is running:** \`mysql -u root -p\`
+- **Check JAR file is in classpath**
+- **For MySQL 8.0+:** Use \`com.mysql.cj.jdbc.Driver\`
+- **For MySQL 5.x:** Use \`com.mysql.jdbc.Driver\`
 
 ### Issue 3: Access Denied
 
 **Error:** \`Access denied for user 'root'@'localhost'\`
 
 **Solution:**
-- ✅ **Check username and password**
-- ✅ **Verify MySQL user exists:**
+- **Check username and password**
+- **Verify MySQL user exists:**
   \`\`\`sql
   SELECT User, Host FROM mysql.user;
   \`\`\`
-- ✅ **Grant permissions:**
+- **Grant permissions:**
   \`\`\`sql
   GRANT ALL PRIVILEGES ON testdb.* TO 'root'@'localhost';
   FLUSH PRIVILEGES;
@@ -480,7 +480,7 @@ public class UserDAO {
 **Error:** \`Communications link failure\`
 
 **Solution:**
-- ✅ **Check MySQL is running:**
+- **Check MySQL is running:**
   \`\`\`bash
   # Windows
   net start MySQL
@@ -488,19 +488,19 @@ public class UserDAO {
   # Linux/Mac
   sudo systemctl status mysql
   \`\`\`
-- ✅ **Verify port 3306 is open**
-- ✅ **Check firewall settings**
+- **Verify port 3306 is open**
+- **Check firewall settings**
 
 ### Issue 5: Timezone Error (MySQL 8.0+)
 
 **Error:** \`The server time zone value 'xxx' is unrecognized\`
 
 **Solution:**
-- ✅ **Add timezone to URL:**
+- **Add timezone to URL:**
   \`\`\`java
   String URL = "jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC";
   \`\`\`
-- ✅ **Or set MySQL timezone:**
+- **Or set MySQL timezone:**
   \`\`\`sql
   SET GLOBAL time_zone = '+00:00';
   \`\`\`
@@ -527,12 +527,12 @@ JDBCExample/
 ## Summary
 
 **Steps to Create JDBC Project:**
-1. ✅ Download MySQL Connector/J from https://dev.mysql.com/downloads/connector/j/
-2. ✅ Create Java project in IDE
-3. ✅ Add JAR file to project (lib folder or Build Path)
-4. ✅ Create database connection class
-5. ✅ Test connection
-6. ✅ Implement CRUD operations
+1. Download MySQL Connector/J from https://dev.mysql.com/downloads/connector/j/
+2. Create Java project in IDE
+3. Add JAR file to project (lib folder or Build Path)
+4. Create database connection class
+5. Test connection
+6. Implement CRUD operations
 
 **Key Points:**
 - **JAR file location:** \`lib/\` folder or Build Path

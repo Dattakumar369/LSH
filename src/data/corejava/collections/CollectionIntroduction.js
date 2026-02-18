@@ -710,7 +710,7 @@ public class CollectionsCompleteDemo {
         System.out.println("📋 SUMMARY");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n✅ Key Takeaways:");
+        System.out.println("\\nKey Takeaways:");
         System.out.println("   • List: Ordered, allows duplicates");
         System.out.println("   • Set: No duplicates");
         System.out.println("   • Map: Key-value pairs");

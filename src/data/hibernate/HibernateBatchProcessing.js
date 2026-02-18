@@ -259,12 +259,12 @@ public void bulkInsertProducts(List<Product> products) {
 \`\`\`
 
 **StatelessSession Characteristics:**
-- ✅ No first-level cache
-- ✅ No dirty checking
-- ✅ Lower memory usage
-- ✅ Faster for bulk operations
-- ❌ No lazy loading
-- ❌ No automatic relationship handling
+- No first-level cache
+- No dirty checking
+- Lower memory usage
+- Faster for bulk operations
+- No lazy loading
+- No automatic relationship handling
 
 ---
 

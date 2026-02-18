@@ -54,10 +54,10 @@ list.add(1, "Middle");  // Fast insertion! O(1)
 
 | Operation | ArrayList | LinkedList |
 |-----------|-----------|------------|
-| get(index) | O(1) ✅ | O(n) |
-| add(end) | O(1)* | O(1) ✅ |
-| add(middle) | O(n) | O(1) ✅ |
-| remove(middle) | O(n) | O(1) ✅ |
+| get(index) | O(1) | O(n) |
+| add(end) | O(1)* | O(1) |
+| add(middle) | O(n) | O(1) |
+| remove(middle) | O(n) | O(1) |
 | Memory | Less | More (node overhead) |
 
 *Amortized - occasionally needs to resize
@@ -420,7 +420,7 @@ class TodoList {
         System.out.println("   --- Todo List ---");
         for (int i = 0; i < tasks.size(); i++) {
             Task task = tasks.get(i);
-            String status = task.completed ? "✓" : "○";
+            String status = task.completed ? "Done" : "Pending";
             System.out.println("   " + (i + 1) + ". [" + status + "] " + task.description);
         }
     }

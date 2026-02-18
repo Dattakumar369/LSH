@@ -200,7 +200,7 @@ public class TransactionSerialization {
         System.out.println("private transient String pin;      // Never saved");
         System.out.println("private transient String password; // Never saved");
         
-        System.out.println("\\n✅ Benefits:");
+        System.out.println("\\nBenefits:");
         System.out.println("   • Sensitive data never written to disk");
         System.out.println("   • Prevents data leakage in logs");
         System.out.println("   • Compliant with PCI-DSS");
@@ -386,7 +386,7 @@ public class SerializationDemo {
         System.out.println("[Serializer] Writing totalAmount: 1249.98");
         System.out.println("[Serializer] Writing status: CONFIRMED");
         System.out.println("[Serializer] Skipping payment (transient)");
-        System.out.println("[Serializer] ✅ Saved to: orders/ORD-2024-001.ser");
+        System.out.println("[Serializer] Saved to: orders/ORD-2024-001.ser");
         System.out.println("[Serializer] File size: 1.2 KB");
         
         // ═══════════════════════════════════════════════════
@@ -420,7 +420,7 @@ public class SerializationDemo {
         System.out.println("[Deserializer] Reading totalAmount: 1249.98");
         System.out.println("[Deserializer] Reading status: CONFIRMED");
         System.out.println("[Deserializer] payment = null (transient)");
-        System.out.println("[Deserializer] ✅ Order reconstructed successfully");
+        System.out.println("[Deserializer] Order reconstructed successfully");
         
         // ═══════════════════════════════════════════════════
         // PART 4: Transient Fields
@@ -431,10 +431,10 @@ public class SerializationDemo {
         
         System.out.println("\\n// Fields marked transient are NOT serialized");
         System.out.println("public class User implements Serializable {");
-        System.out.println("    private String username;        // ✅ Serialized");
-        System.out.println("    private String email;           // ✅ Serialized");
-        System.out.println("    private transient String password; // ❌ Not serialized");
-        System.out.println("    private transient String ssn;      // ❌ Not serialized");
+        System.out.println("    private String username;        // Serialized");
+        System.out.println("    private String email;           // Serialized");
+        System.out.println("    private transient String password; // Not serialized");
+        System.out.println("    private transient String ssn;      // Not serialized");
         System.out.println("}");
         
         System.out.println("\\n📋 Transient Use Cases:");
@@ -464,10 +464,10 @@ public class SerializationDemo {
         System.out.println("\\nVersion 2 (current):");
         System.out.println("  class Order { String orderId; double amount; String status; }");
         
-        System.out.println("\\n❌ Without serialVersionUID:");
+        System.out.println("\\nWithout serialVersionUID:");
         System.out.println("   InvalidClassException: local class incompatible");
         
-        System.out.println("\\n✅ With serialVersionUID = 1L:");
+        System.out.println("\\nWith serialVersionUID = 1L:");
         System.out.println("   Deserialization succeeds");
         System.out.println("   New field 'status' = null (default)");
         

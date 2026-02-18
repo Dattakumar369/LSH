@@ -267,7 +267,7 @@ public class ECommerceMultithreading {
         // ═══════════════════════════════════════════════════
         // Without Multithreading (Sequential)
         // ═══════════════════════════════════════════════════
-        System.out.println("\\n❌ WITHOUT MULTITHREADING (Sequential):");
+        System.out.println("\\nWITHOUT MULTITHREADING (Sequential):");
         System.out.println("─".repeat(50));
         System.out.println("\\nOrder Processing Flow:");
         System.out.println("┌─────────────────────────────────────────────────┐");
@@ -280,7 +280,7 @@ public class ECommerceMultithreading {
         // ═══════════════════════════════════════════════════
         // With Multithreading (Parallel)
         // ═══════════════════════════════════════════════════
-        System.out.println("\\n✅ WITH MULTITHREADING (Parallel):");
+        System.out.println("\\nWITH MULTITHREADING (Parallel):");
         System.out.println("─".repeat(50));
         System.out.println("\\nParallel Order Processing:");
         System.out.println("┌─────────────────────────────────────────────────┐");
@@ -600,7 +600,7 @@ public class MultithreadingCompleteDemo {
         System.out.println("📋 SUMMARY");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n✅ Key Takeaways:");
+        System.out.println("\\nKey Takeaways:");
         System.out.println("   • Thread = Lightweight sub-process");
         System.out.println("   • States: NEW → RUNNABLE → RUNNING → TERMINATED");
         System.out.println("   • Create: Thread class or Runnable interface");

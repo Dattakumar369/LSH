@@ -267,35 +267,35 @@ public class ECommerceExceptionDemo {
         System.out.println("\\n1️⃣ INVENTORY CHECK:");
         System.out.println("   Ordered: " + quantity + ", Available: " + stockAvailable);
         if (quantity > stockAvailable) {
-            System.out.println("   ❌ InsufficientStockException");
+            System.out.println("   InsufficientStockException");
             System.out.println("   Action: Notify customer, suggest alternatives");
         } else {
-            System.out.println("   ✅ Stock available");
+            System.out.println("   Stock available");
         }
         
         // Scenario 2: Payment Processing
         System.out.println("\\n2️⃣ PAYMENT PROCESSING:");
         String cardNumber = null;
         if (cardNumber == null) {
-            System.out.println("   ❌ NullPointerException (Card details missing)");
+            System.out.println("   NullPointerException (Card details missing)");
             System.out.println("   Action: Redirect to payment page");
         }
         
         // Scenario 3: Database Connection
         System.out.println("\\n3️⃣ DATABASE CONNECTION:");
-        System.out.println("   ❌ SQLException (Connection timeout)");
+        System.out.println("   SQLException (Connection timeout)");
         System.out.println("   Action: Retry connection, show error message");
         
         // Scenario 4: External API Call
         System.out.println("\\n4️⃣ SHIPPING API CALL:");
-        System.out.println("   ❌ IOException (API unreachable)");
+        System.out.println("   IOException (API unreachable)");
         System.out.println("   Action: Use fallback shipping provider");
         
         // ═══════════════════════════════════════════════════
         // How to Handle
         // ═══════════════════════════════════════════════════
         System.out.println("\\n" + "═".repeat(50));
-        System.out.println("✅ PROPER EXCEPTION HANDLING");
+        System.out.println("PROPER EXCEPTION HANDLING");
         System.out.println("═".repeat(50));
         
         System.out.println("\\ntry {");
@@ -350,7 +350,7 @@ public class BankingExceptionDemo {
         // Scenario 1: Insufficient Balance
         System.out.println("\\n1️⃣ WITHDRAWAL:");
         if (withdrawAmount > balance) {
-            System.out.println("   ❌ InsufficientBalanceException");
+            System.out.println("   InsufficientBalanceException");
             System.out.println("   Message: Insufficient funds");
             System.out.println("   Available: $" + String.format("%,.2f", balance));
             System.out.println("   Action: Deny transaction, notify customer");
@@ -360,7 +360,7 @@ public class BankingExceptionDemo {
         System.out.println("\\n2️⃣ ACCOUNT LOOKUP:");
         String invalidAccount = "ACC-0000000000";
         System.out.println("   Looking up: " + invalidAccount);
-        System.out.println("   ❌ AccountNotFoundException");
+        System.out.println("   AccountNotFoundException");
         System.out.println("   Action: Show error, verify account number");
         
         // Scenario 3: Daily Limit Exceeded
@@ -369,7 +369,7 @@ public class BankingExceptionDemo {
         double todayWithdrawals = 8000.00;
         double newWithdrawal = 5000.00;
         if (todayWithdrawals + newWithdrawal > dailyLimit) {
-            System.out.println("   ❌ DailyLimitExceededException");
+            System.out.println("   DailyLimitExceededException");
             System.out.println("   Daily Limit: $" + String.format("%,.2f", dailyLimit));
             System.out.println("   Already Withdrawn: $" + String.format("%,.2f", todayWithdrawals));
             System.out.println("   Remaining: $" + String.format("%,.2f", dailyLimit - todayWithdrawals));
@@ -377,7 +377,7 @@ public class BankingExceptionDemo {
         
         // Scenario 4: Session Timeout
         System.out.println("\\n4️⃣ SESSION:");
-        System.out.println("   ❌ SessionExpiredException");
+        System.out.println("   SessionExpiredException");
         System.out.println("   Action: Redirect to login page");
         
         // ═══════════════════════════════════════════════════
@@ -486,7 +486,7 @@ public class ExceptionCompleteDemo {
         try {
             int result = 10 / 0;
         } catch (ArithmeticException e) {
-            System.out.println("   ❌ Caught: " + e.getClass().getSimpleName());
+            System.out.println("   Caught: " + e.getClass().getSimpleName());
             System.out.println("   Message: " + e.getMessage());
             System.out.println("   Cause: Division by zero");
         }
@@ -497,7 +497,7 @@ public class ExceptionCompleteDemo {
             String str = null;
             int len = str.length();
         } catch (NullPointerException e) {
-            System.out.println("   ❌ Caught: " + e.getClass().getSimpleName());
+            System.out.println("   Caught: " + e.getClass().getSimpleName());
             System.out.println("   Cause: Accessing method on null reference");
         }
         
@@ -507,7 +507,7 @@ public class ExceptionCompleteDemo {
             int[] arr = {1, 2, 3};
             int val = arr[5];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("   ❌ Caught: " + e.getClass().getSimpleName());
+            System.out.println("   Caught: " + e.getClass().getSimpleName());
             System.out.println("   Message: " + e.getMessage());
             System.out.println("   Cause: Invalid array index");
         }
@@ -517,7 +517,7 @@ public class ExceptionCompleteDemo {
         try {
             int num = Integer.parseInt("abc");
         } catch (NumberFormatException e) {
-            System.out.println("   ❌ Caught: " + e.getClass().getSimpleName());
+            System.out.println("   Caught: " + e.getClass().getSimpleName());
             System.out.println("   Cause: Invalid number format");
         }
         
@@ -595,14 +595,14 @@ public class ExceptionCompleteDemo {
         System.out.println("📌 PART 7: BEST PRACTICES");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n✅ DO:");
+        System.out.println("\\nDO:");
         System.out.println("   • Catch specific exceptions");
         System.out.println("   • Use finally for cleanup");
         System.out.println("   • Log exceptions properly");
         System.out.println("   • Create custom exceptions for business logic");
         System.out.println("   • Use try-with-resources for auto-close");
         
-        System.out.println("\\n❌ DON'T:");
+        System.out.println("\\nDON'T:");
         System.out.println("   • Catch generic Exception");
         System.out.println("   • Swallow exceptions (empty catch)");
         System.out.println("   • Use exceptions for flow control");
@@ -615,7 +615,7 @@ public class ExceptionCompleteDemo {
         System.out.println("📋 SUMMARY");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n✅ Key Takeaways:");
+        System.out.println("\\nKey Takeaways:");
         System.out.println("   • Exception = Unexpected event during execution");
         System.out.println("   • Checked = Must handle (IOException)");
         System.out.println("   • Unchecked = Optional (NullPointerException)");

@@ -179,6 +179,24 @@ import githubSecurity from './git/GitHubSecurity';
 import githubTeams from './git/GitHubTeams';
 import gitRevert from './git/GitRevert';
 
+// Maven
+import mavenIntroduction from './maven/MavenIntroduction';
+import mavenWhy from './maven/MavenWhy';
+import mavenInstallation from './maven/MavenInstallation';
+import mavenProjectStructure from './maven/MavenProjectStructure';
+import mavenPomXml from './maven/MavenPomXml';
+import mavenCreateProject from './maven/MavenCreateProject';
+import mavenBuildLifecycle from './maven/MavenBuildLifecycle';
+import mavenRepositories from './maven/MavenRepositories';
+import mavenDependencyManagement from './maven/MavenDependencyManagement';
+import mavenPlugins from './maven/MavenPlugins';
+import mavenMultiModule from './maven/MavenMultiModule';
+import mavenSpringBoot from './maven/MavenSpringBoot';
+import mavenCommands from './maven/MavenCommands';
+import mavenCommonErrors from './maven/MavenCommonErrors';
+import mavenVsGradle from './maven/MavenVsGradle';
+import mavenBestPractices from './maven/MavenBestPractices';
+
 export const courseStructure = {
   html: {
     title: "HTML",
@@ -608,6 +626,34 @@ export const courseStructure = {
           githubSecurity,
           githubTeams,
           gitRevert
+        ]
+      }
+    }
+  },
+  maven: {
+    title: "Maven",
+    icon: "📦",
+    color: "#C71A36",
+    sections: {
+      basics: {
+        title: "Maven Basics",
+        topics: [
+          mavenIntroduction,
+          mavenWhy,
+          mavenInstallation,
+          mavenProjectStructure,
+          mavenPomXml,
+          mavenCreateProject,
+          mavenBuildLifecycle,
+          mavenRepositories,
+          mavenDependencyManagement,
+          mavenPlugins,
+          mavenMultiModule,
+          mavenSpringBoot,
+          mavenCommands,
+          mavenCommonErrors,
+          mavenVsGradle,
+          mavenBestPractices
         ]
       }
     }

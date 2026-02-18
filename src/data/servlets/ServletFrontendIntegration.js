@@ -375,7 +375,7 @@ public class RegisterServlet extends HttpServlet {
         out.println("<body>");
         out.println("<div class='container'>");
         out.println("<div class='success-container'>");
-        out.println("<h1 class='success-message'>✅ Registration Successful!</h1>");
+        out.println("<h1 class='success-message'>Registration Successful!</h1>");
         out.println("<div class='user-info'>");
         out.println("<h2>User Details:</h2>");
         out.println("<div class='info-row'>");
@@ -698,27 +698,27 @@ String safeOutput = escapeHtml(userInput);
 **Problem:** \`request.getParameter()\` returns \`null\`
 
 **Solutions:**
-- ✅ Check \`name\` attribute matches parameter name
-- ✅ Verify form \`action\` matches Servlet URL pattern
-- ✅ Ensure \`method="POST"\` and Servlet has \`doPost()\`
+- Check \`name\` attribute matches parameter name
+- Verify form \`action\` matches Servlet URL pattern
+- Ensure \`method="POST"\` and Servlet has \`doPost()\`
 
 ### Issue 2: CSS not loading
 
 **Problem:** Styles not applied
 
 **Solutions:**
-- ✅ Check CSS file path: \`href="css/style.css"\`
-- ✅ Verify file is in \`WebContent/css/\` folder
-- ✅ Check browser console for 404 errors
+- Check CSS file path: \`href="css/style.css"\`
+- Verify file is in \`WebContent/css/\` folder
+- Check browser console for 404 errors
 
 ### Issue 3: Servlet not found (404)
 
 **Problem:** Server can't find Servlet
 
 **Solutions:**
-- ✅ Verify \`@WebServlet("/register")\` annotation
-- ✅ Check \`web.xml\` mapping if using XML config
-- ✅ Ensure Servlet is in correct package
+- Verify \`@WebServlet("/register")\` annotation
+- Check \`web.xml\` mapping if using XML config
+- Ensure Servlet is in correct package
 
 ---
 
@@ -726,11 +726,11 @@ String safeOutput = escapeHtml(userInput);
 
 **HTML/CSS Frontend + Servlet Backend Flow:**
 
-1. ✅ **HTML Form** - User interface with \`action\` and \`method\`
-2. ✅ **CSS Styling** - External stylesheet for professional look
-3. ✅ **Servlet** - Receives form data via \`request.getParameter()\`
-4. ✅ **Processing** - Business logic, validation, database operations
-5. ✅ **Response** - HTML output sent back to browser
+1. **HTML Form** - User interface with \`action\` and \`method\`
+2. **CSS Styling** - External stylesheet for professional look
+3. **Servlet** - Receives form data via \`request.getParameter()\`
+4. **Processing** - Business logic, validation, database operations
+5. **Response** - HTML output sent back to browser
 
 **Key Concepts:**
 - \`action\` attribute maps to Servlet URL
@@ -915,12 +915,12 @@ Servlet:
 // 7. BEST PRACTICES
 // ============================================
 /*
-✅ Always validate input in Servlet
-✅ Use POST for sensitive data (passwords)
-✅ Escape HTML to prevent XSS attacks
-✅ Use external CSS files (not inline in Servlet)
-✅ Separate presentation (HTML) from logic (Servlet)
-✅ Use RequestDispatcher to forward to JSP for complex pages
+Always validate input in Servlet
+Use POST for sensitive data (passwords)
+Escape HTML to prevent XSS attacks
+Use external CSS files (not inline in Servlet)
+Separate presentation (HTML) from logic (Servlet)
+Use RequestDispatcher to forward to JSP for complex pages
 */
 `
 };

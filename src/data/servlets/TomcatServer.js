@@ -492,12 +492,12 @@ sudo systemctl start tomcat
 ## Summary
 
 **Key Points:**
-- ✅ Tomcat is a servlet/JSP container
-- ✅ Download from apache.org
-- ✅ JAR files are in \`lib/\` folder
-- ✅ Deploy WAR files to \`webapps/\`
-- ✅ Default port: 8080
-- ✅ Access: http://localhost:8080
+- Tomcat is a servlet/JSP container
+- Download from apache.org
+- JAR files are in \`lib/\` folder
+- Deploy WAR files to \`webapps/\`
+- Default port: 8080
+- Access: http://localhost:8080
 
 **Important Folders:**
 - \`bin/\` - Start/stop scripts
@@ -527,10 +527,10 @@ Master Tomcat, and you can deploy any Java web application!
 
 // 1. PREREQUISITES
 /*
-✅ Java JDK 8+ installed
-✅ JAVA_HOME environment variable set
-✅ Download Tomcat from apache.org
-✅ Extract to a folder
+Java JDK 8+ installed
+JAVA_HOME environment variable set
+Download Tomcat from apache.org
+Extract to a folder
 */
 
 // 2. TOMCAT DIRECTORY STRUCTURE

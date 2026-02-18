@@ -44,10 +44,10 @@ Hibernate provides three levels of caching:
 Every Session maintains its own cache. This is called the **first-level cache** or **session cache**.
 
 **Characteristics:**
-- ✅ **Automatic** - No configuration needed
-- ✅ **Per-Session** - Each session has its own cache
-- ✅ **Short-Lived** - Exists only during session lifetime
-- ✅ **No Configuration** - Always enabled
+- **Automatic** - No configuration needed
+- **Per-Session** - Each session has its own cache
+- **Short-Lived** - Exists only during session lifetime
+- **No Configuration** - Always enabled
 
 ### How It Works
 
@@ -110,17 +110,17 @@ session.close();
 Second-level cache is **shared across all sessions** in a SessionFactory. It persists beyond session lifetime.
 
 **Characteristics:**
-- ⚙️ **Optional** - Must be configured
-- 🔄 **Shared** - All sessions share the same cache
-- 💾 **Persistent** - Survives session closure
-- 🚀 **High Performance** - Significantly reduces database load
+- **Optional** - Must be configured
+- **Shared** - All sessions share the same cache
+- **Persistent** - Survives session closure
+- **High Performance** - Significantly reduces database load
 
 ### When to Use
 
-✅ **Read-Heavy Applications** - Data read more than written
-✅ **Reference Data** - Data that rarely changes (categories, countries)
-✅ **Expensive Queries** - Complex queries that take time
-✅ **High Traffic** - Applications with many concurrent users
+**Read-Heavy Applications** - Data read more than written
+**Reference Data** - Data that rarely changes (categories, countries)
+**Expensive Queries** - Complex queries that take time
+**High Traffic** - Applications with many concurrent users
 
 ### Configuration
 

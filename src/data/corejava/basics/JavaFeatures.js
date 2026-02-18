@@ -178,7 +178,7 @@ Source Code → Compiler → Bytecode → JVM Interpreter → Execution
 
 | Feature | Java | C++ | Python |
 |---------|------|-----|--------|
-| Platform Independent | ✅ | ❌ | ✅ |
+| Platform Independent | Yes | No | Yes |
 | Memory Management | Automatic | Manual | Automatic |
 | Type Safety | Strong | Strong | Weak |
 | Performance | High | Very High | Moderate |
@@ -315,11 +315,11 @@ public class JavaFeaturesDemo {
         // Summary
         System.out.println("=== SUMMARY ===");
         System.out.println("Java combines:");
-        System.out.println("✓ Simplicity of high-level languages");
-        System.out.println("✓ Power of object-oriented design");
-        System.out.println("✓ Security of managed runtime");
-        System.out.println("✓ Portability across all platforms");
-        System.out.println("✓ Performance of JIT compilation");
+        System.out.println("Simplicity of high-level languages");
+        System.out.println("Power of object-oriented design");
+        System.out.println("Security of managed runtime");
+        System.out.println("Portability across all platforms");
+        System.out.println("Performance of JIT compilation");
     }
     
     public static int divide(int a, int b) {

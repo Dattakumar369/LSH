@@ -359,11 +359,11 @@ public class JdbcDriversDemo {
         // 7. BEST PRACTICES
         System.out.println("7. BEST PRACTICES");
         System.out.println("   ---------------");
-        System.out.println("   ✓ Use Type 4 drivers for new projects");
-        System.out.println("   ✓ Use connection pooling in production");
-        System.out.println("   ✓ Store credentials in config files, not code");
-        System.out.println("   ✓ Use try-with-resources for auto-closing");
-        System.out.println("   ✓ Keep driver version updated");
+        System.out.println("   Use Type 4 drivers for new projects");
+        System.out.println("   Use connection pooling in production");
+        System.out.println("   Store credentials in config files, not code");
+        System.out.println("   Use try-with-resources for auto-closing");
+        System.out.println("   Keep driver version updated");
     }
 }`,
   practiceQuestions: [

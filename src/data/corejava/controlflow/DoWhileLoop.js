@@ -54,11 +54,11 @@ public class FormValidation {
             System.out.println("Input: " + username);
             
             if (username.length() < 3) {
-                System.out.println("❌ Too short (min 3 characters)");
+                System.out.println("Too short (min 3 characters)");
             } else if (username.contains("@")) {
-                System.out.println("❌ Cannot contain special characters");
+                System.out.println("Cannot contain special characters");
             } else {
-                System.out.println("✅ Username accepted!");
+                System.out.println("Username accepted!");
                 validUsername = username;
                 isValid = true;
             }
@@ -77,11 +77,11 @@ public class FormValidation {
             System.out.println("Input: " + email);
             
             if (!email.contains("@")) {
-                System.out.println("❌ Must contain @");
+                System.out.println("Must contain @");
             } else if (!email.contains(".")) {
-                System.out.println("❌ Invalid email format");
+                System.out.println("Invalid email format");
             } else {
-                System.out.println("✅ Email accepted!");
+                System.out.println("Email accepted!");
                 validEmail = email;
                 isValid = true;
             }
@@ -100,13 +100,13 @@ public class FormValidation {
             System.out.println("Input: " + password);
             
             if (password.length() < 8) {
-                System.out.println("❌ Too short (min 8 characters)");
+                System.out.println("Too short (min 8 characters)");
             } else if (!password.matches(".*[A-Z].*")) {
-                System.out.println("❌ Must contain uppercase letter");
+                System.out.println("Must contain uppercase letter");
             } else if (!password.matches(".*[0-9].*")) {
-                System.out.println("❌ Must contain a number");
+                System.out.println("Must contain a number");
             } else {
-                System.out.println("✅ Password accepted!");
+                System.out.println("Password accepted!");
                 validPassword = password;
                 isValid = true;
             }
@@ -115,7 +115,7 @@ public class FormValidation {
         
         // Registration result
         System.out.println("\\n" + "═".repeat(40));
-        System.out.println("✅ REGISTRATION SUCCESSFUL!");
+        System.out.println("REGISTRATION SUCCESSFUL!");
         System.out.println("═".repeat(40));
         System.out.println("Username: " + validUsername);
         System.out.println("Email: " + validEmail);
@@ -184,7 +184,7 @@ public class GameMainMenu {
                     break;
                     
                 default:
-                    System.out.println("❌ Invalid option!");
+                    System.out.println("Invalid option!");
             }
             
         } while (!exitGame && selectionIndex < menuSelections.length);
@@ -221,7 +221,7 @@ public class CheckoutProcess {
                     System.out.println("\\n🛍️ REVIEW YOUR CART");
                     System.out.println("   Items: 3");
                     System.out.println("   Subtotal: $" + cartTotal);
-                    System.out.println("   ✅ Cart confirmed");
+                    System.out.println("   Cart confirmed");
                     step++;
                     break;
                     
@@ -230,7 +230,7 @@ public class CheckoutProcess {
                     System.out.println("   John Smith");
                     System.out.println("   123 Main Street");
                     System.out.println("   New York, NY 10001");
-                    System.out.println("   ✅ Address verified");
+                    System.out.println("   Address verified");
                     step++;
                     break;
                     
@@ -238,12 +238,12 @@ public class CheckoutProcess {
                     System.out.println("\\n💳 PAYMENT METHOD");
                     System.out.println("   Card: **** **** **** 1234");
                     System.out.println("   Processing payment...");
-                    System.out.println("   ✅ Payment successful!");
+                    System.out.println("   Payment successful!");
                     step++;
                     break;
                     
                 case 4: // Confirmation
-                    System.out.println("\\n✅ ORDER CONFIRMED!");
+                    System.out.println("\\nORDER CONFIRMED!");
                     System.out.println("   Order #: ORD-" + System.currentTimeMillis());
                     System.out.println("   Total: $" + cartTotal);
                     System.out.println("   Delivery: 3-5 business days");
@@ -299,13 +299,13 @@ public class UserRegistration {
             System.out.println("\\nAttempt " + (attempts + 1) + ": \\"" + username + "\\"");
             
             if (username.length() < 3) {
-                System.out.println("   ❌ Too short (minimum 3 characters)");
+                System.out.println("   Too short (minimum 3 characters)");
             } else if (username.length() > 20) {
-                System.out.println("   ❌ Too long (maximum 20 characters)");
+                System.out.println("   Too long (maximum 20 characters)");
             } else if (!username.matches("^[a-zA-Z0-9_]+$")) {
-                System.out.println("   ❌ Invalid characters (only letters, numbers, underscore)");
+                System.out.println("   Invalid characters (only letters, numbers, underscore)");
             } else {
-                System.out.println("   ✅ Username accepted!");
+                System.out.println("   Username accepted!");
                 validUsername = username;
                 isValid = true;
             }
@@ -327,13 +327,13 @@ public class UserRegistration {
             System.out.println("\\nAttempt " + (attempts + 1) + ": \\"" + email + "\\"");
             
             if (!email.contains("@")) {
-                System.out.println("   ❌ Missing @ symbol");
+                System.out.println("   Missing @ symbol");
             } else if (!email.contains(".")) {
-                System.out.println("   ❌ Missing domain extension");
+                System.out.println("   Missing domain extension");
             } else if (email.indexOf("@") > email.lastIndexOf(".")) {
-                System.out.println("   ❌ Invalid format");
+                System.out.println("   Invalid format");
             } else {
-                System.out.println("   ✅ Email accepted!");
+                System.out.println("   Email accepted!");
                 validEmail = email;
                 isValid = true;
             }
@@ -362,14 +362,14 @@ public class UserRegistration {
             boolean hasSpecial = password.matches(".*[!@#$%^&*].*");
             
             System.out.println("   Strength Check:");
-            System.out.println("   " + (hasLength ? "✓" : "✗") + " Minimum 8 characters");
-            System.out.println("   " + (hasUpper ? "✓" : "✗") + " Uppercase letter");
-            System.out.println("   " + (hasLower ? "✓" : "✗") + " Lowercase letter");
-            System.out.println("   " + (hasDigit ? "✓" : "✗") + " Number");
-            System.out.println("   " + (hasSpecial ? "✓" : "✗") + " Special character");
+            System.out.println("   " + (hasLength ? "Yes" : "No") + " Minimum 8 characters");
+            System.out.println("   " + (hasUpper ? "Yes" : "No") + " Uppercase letter");
+            System.out.println("   " + (hasLower ? "Yes" : "No") + " Lowercase letter");
+            System.out.println("   " + (hasDigit ? "Yes" : "No") + " Number");
+            System.out.println("   " + (hasSpecial ? "Yes" : "No") + " Special character");
             
             if (hasLength && hasUpper && hasLower && hasDigit && hasSpecial) {
-                System.out.println("   ✅ Password accepted! (Strong)");
+                System.out.println("   Password accepted! (Strong)");
                 validPassword = password;
                 isValid = true;
             } else if (hasLength && hasUpper && hasDigit) {
@@ -377,7 +377,7 @@ public class UserRegistration {
                 validPassword = password;
                 isValid = true;
             } else {
-                System.out.println("   ❌ Password too weak");
+                System.out.println("   Password too weak");
             }
             attempts++;
         } while (!isValid && attempts < passwordInputs.length);
@@ -397,11 +397,11 @@ public class UserRegistration {
             System.out.println("\\nAttempt " + (attempts + 1) + ": \\"" + phone + "\\"");
             
             if (phone.length() != 10) {
-                System.out.println("   ❌ Must be exactly 10 digits");
+                System.out.println("   Must be exactly 10 digits");
             } else if (!phone.matches("^[0-9]+$")) {
-                System.out.println("   ❌ Must contain only numbers");
+                System.out.println("   Must contain only numbers");
             } else {
-                System.out.println("   ✅ Phone number accepted!");
+                System.out.println("   Phone number accepted!");
                 validPhone = phone;
                 isValid = true;
             }
@@ -412,7 +412,7 @@ public class UserRegistration {
         // REGISTRATION COMPLETE
         // ═══════════════════════════════════════
         System.out.println("\\n╔════════════════════════════════════════╗");
-        System.out.println("║     ✅ REGISTRATION SUCCESSFUL!        ║");
+        System.out.println("║     REGISTRATION SUCCESSFUL!        ║");
         System.out.println("╚════════════════════════════════════════╝");
         System.out.println("\\n📋 Account Details:");
         System.out.println("────────────────────");

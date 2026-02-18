@@ -584,9 +584,9 @@ public class PasswordValidatorDemo {
         for (String password : passwords) {
             try {
                 validator.validate(password);
-                System.out.println("✓ Valid password: " + password);
+                System.out.println("Valid password: " + password);
             } catch (PasswordValidationException e) {
-                System.out.println("✗ Invalid: " + e.getMessage());
+                System.out.println("Invalid: " + e.getMessage());
             }
         }
     }

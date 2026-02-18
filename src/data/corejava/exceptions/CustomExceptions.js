@@ -387,9 +387,9 @@ public class CustomExceptionsDemo {
         for (String[] testCase : testCases) {
             try {
                 regService.register(testCase[0], testCase[1], testCase[2]);
-                System.out.println("   ✓ Registration successful for: " + testCase[0]);
+                System.out.println("   Registration successful for: " + testCase[0]);
             } catch (ValidationException e) {
-                System.out.println("   ✗ Validation failed: " + e.getMessage());
+                System.out.println("   Validation failed: " + e.getMessage());
                 System.out.println("     Field: " + e.getFieldName());
             }
         }
@@ -644,31 +644,31 @@ public class LibraryDemo {
         try {
             // Borrow a book
             library.borrowBook("B001", "Alice");
-            System.out.println("✓ Alice borrowed B001");
+            System.out.println("Alice borrowed B001");
             
             // Try to borrow same book
             library.borrowBook("B001", "Bob");
         } catch (BookNotAvailableException e) {
-            System.out.println("✗ " + e.getMessage());
+            System.out.println(e.getMessage());
             System.out.println("  Borrowed by: " + e.getCurrentBorrower());
         }
         
         try {
             // Return a book
             library.returnBook("B001", "Alice");
-            System.out.println("✓ Alice returned B001");
+            System.out.println("Alice returned B001");
             
             // Try to return book not borrowed
             library.returnBook("B002", "Alice");
         } catch (BookNotBorrowedException e) {
-            System.out.println("✗ " + e.getMessage());
+            System.out.println(e.getMessage());
         }
         
         try {
             // Find non-existent book
             library.findBook("B999");
         } catch (BookNotFoundException e) {
-            System.out.println("✗ " + e.getMessage());
+            System.out.println(e.getMessage());
             System.out.println("  Book ID: " + e.getBookId());
         }
     }

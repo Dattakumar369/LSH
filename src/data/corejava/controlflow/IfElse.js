@@ -359,17 +359,17 @@ public class IfElseDemo {
         
         // AND
         if (userAge >= 18 && hasLicense) {
-            System.out.println("   ✓ Can legally drive");
+            System.out.println("   Can legally drive");
         }
         
         // OR
         if (hasLicense || hasCar) {
-            System.out.println("   ✓ Has license OR car");
+            System.out.println("   Has license OR car");
         }
         
         // Complex
         if (userAge >= 18 && hasLicense && !hasCar) {
-            System.out.println("   ✓ Can drive but needs to rent a car");
+            System.out.println("   Can drive but needs to rent a car");
         }
         System.out.println();
         
@@ -384,13 +384,13 @@ public class IfElseDemo {
         
         if (userType.equals("premium")) {
             if (purchaseAmount >= 100) {
-                System.out.println("   ✓ 20% discount applied!");
+                System.out.println("   20% discount applied!");
             } else {
-                System.out.println("   ✓ 10% discount applied!");
+                System.out.println("   10% discount applied!");
             }
         } else {
             if (purchaseAmount >= 100) {
-                System.out.println("   ✓ 5% discount applied!");
+                System.out.println("   5% discount applied!");
             } else {
                 System.out.println("   No discount");
             }

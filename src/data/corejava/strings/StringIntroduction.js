@@ -229,7 +229,7 @@ public class EmailValidation {
         
         for (String email : emails) {
             boolean isValid = validateEmail(email);
-            String status = isValid ? "✅ Valid" : "❌ Invalid";
+            String status = isValid ? "Valid" : "Invalid";
             System.out.println("   " + email);
             System.out.println("   → " + status);
             System.out.println();
@@ -387,17 +387,17 @@ public class StringOperationsDemo {
         boolean hasSpecial = rawPassword.matches(".*[!@#$%^&*].*");
         boolean validLength = rawPassword.length() >= 8;
         
-        System.out.println("   Length >= 8:  " + (validLength ? "✅" : "❌"));
-        System.out.println("   Has Upper:    " + (hasUpper ? "✅" : "❌"));
-        System.out.println("   Has Lower:    " + (hasLower ? "✅" : "❌"));
-        System.out.println("   Has Digit:    " + (hasDigit ? "✅" : "❌"));
-        System.out.println("   Has Special:  " + (hasSpecial ? "✅" : "❌"));
+        System.out.println("   Length >= 8:  " + (validLength ? "Yes" : "No"));
+        System.out.println("   Has Upper:    " + (hasUpper ? "Yes" : "No"));
+        System.out.println("   Has Lower:    " + (hasLower ? "Yes" : "No"));
+        System.out.println("   Has Digit:    " + (hasDigit ? "Yes" : "No"));
+        System.out.println("   Has Special:  " + (hasSpecial ? "Yes" : "No"));
         
         // ═══════════════════════════════════════════════════
         // PART 3: Final Processed Data
         // ═══════════════════════════════════════════════════
         System.out.println("\\n" + "═".repeat(50));
-        System.out.println("✅ PART 3: PROCESSED USER DATA");
+        System.out.println("PART 3: PROCESSED USER DATA");
         System.out.println("═".repeat(50));
         
         System.out.println("\\n┌─────────────────────────────────────────────────┐");

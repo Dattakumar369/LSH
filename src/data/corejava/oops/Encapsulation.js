@@ -120,10 +120,10 @@ Java provides four access levels:
 
 | Modifier | Class | Package | Subclass | World |
 |----------|-------|---------|----------|-------|
-| private | ✅ | ❌ | ❌ | ❌ |
-| (default) | ✅ | ✅ | ❌ | ❌ |
-| protected | ✅ | ✅ | ✅ | ❌ |
-| public | ✅ | ✅ | ✅ | ✅ |
+| private | Yes | No | No | No |
+| (default) | Yes | Yes | No | No |
+| protected | Yes | Yes | Yes | No |
+| public | Yes | Yes | Yes | Yes |
 
 **Rule of thumb:** Start with \`private\`, only increase access when necessary.
 

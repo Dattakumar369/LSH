@@ -35,7 +35,7 @@ public class BankAccountSync {
         System.out.println("=================================");
         
         // The Problem: Race Condition
-        System.out.println("\\n❌ WITHOUT SYNCHRONIZATION (Race Condition):");
+        System.out.println("\\nWITHOUT SYNCHRONIZATION (Race Condition):");
         System.out.println("─".repeat(50));
         
         System.out.println("\\nScenario: Two ATMs accessing same account");
@@ -50,12 +50,12 @@ public class BankAccountSync {
         System.out.println("│ T5   │                    │ Withdraw $800      │");
         System.out.println("│ T6   │                    │ Write balance=$200 │");
         System.out.println("├──────┴────────────────────┴────────────────────┤");
-        System.out.println("│ ❌ RESULT: $1600 withdrawn from $1000 account! │");
+        System.out.println("│ RESULT: $1600 withdrawn from $1000 account! │");
         System.out.println("│    Bank loses $600!                            │");
         System.out.println("└─────────────────────────────────────────────────┘");
         
         // The Solution: Synchronized Method
-        System.out.println("\\n✅ WITH SYNCHRONIZATION:");
+        System.out.println("\\nWITH SYNCHRONIZATION:");
         System.out.println("─".repeat(50));
         
         System.out.println("\\n// Synchronized withdraw method");
@@ -75,16 +75,16 @@ public class BankAccountSync {
         System.out.println("\\n┌─────────────────────────────────────────────────┐");
         System.out.println("│ Time │ ATM-1              │ ATM-2              │");
         System.out.println("├──────┼────────────────────┼────────────────────┤");
-        System.out.println("│ T1   │ Acquire lock ✓     │                    │");
+        System.out.println("│ T1   │ Acquire lock       │                    │");
         System.out.println("│ T2   │ Read balance=$1000 │ Waiting for lock...│");
         System.out.println("│ T3   │ Withdraw $800      │ Waiting...         │");
         System.out.println("│ T4   │ Write balance=$200 │ Waiting...         │");
-        System.out.println("│ T5   │ Release lock       │ Acquire lock ✓     │");
+        System.out.println("│ T5   │ Release lock       │ Acquire lock       │");
         System.out.println("│ T6   │                    │ Read balance=$200  │");
-        System.out.println("│ T7   │                    │ ❌ Insufficient!   │");
+        System.out.println("│ T7   │                    │ Insufficient!      │");
         System.out.println("│ T8   │                    │ Release lock       │");
         System.out.println("├──────┴────────────────────┴────────────────────┤");
-        System.out.println("│ ✅ RESULT: Only $800 withdrawn. Bank is safe!  │");
+        System.out.println("│ RESULT: Only $800 withdrawn. Bank is safe!     │");
         System.out.println("└─────────────────────────────────────────────────┘");
     }
 }
@@ -126,7 +126,7 @@ public class InventorySync {
         System.out.println("    }");
         System.out.println("}");
         
-        System.out.println("\\n✅ Benefits of Synchronized Block:");
+        System.out.println("\\nBenefits of Synchronized Block:");
         System.out.println("   • Only critical section is locked");
         System.out.println("   • Better performance than synchronized method");
         System.out.println("   • Non-critical code runs in parallel");
@@ -139,15 +139,15 @@ public class InventorySync {
         System.out.println("Stock: 1 unit");
         System.out.println("Buyers: User A and User B (simultaneous)");
         
-        System.out.println("\\n❌ Without Sync:");
+        System.out.println("\\nWithout Sync:");
         System.out.println("   User A: Check stock (1) → Reserve → Success");
         System.out.println("   User B: Check stock (1) → Reserve → Success");
         System.out.println("   Result: 2 orders for 1 item! 😱");
         
-        System.out.println("\\n✅ With Sync:");
+        System.out.println("\\nWith Sync:");
         System.out.println("   User A: Acquire lock → Check (1) → Reserve → Release");
         System.out.println("   User B: Wait → Acquire lock → Check (0) → Fail");
-        System.out.println("   Result: Only 1 order. Inventory accurate! ✓");
+        System.out.println("   Result: Only 1 order. Inventory accurate!");
     }
 }
 \`\`\`
@@ -192,7 +192,7 @@ public class SessionSync {
         System.out.println("│ Server 2: +30 sessions (synchronized)           │");
         System.out.println("│ Server 3: -20 sessions (synchronized)           │");
         System.out.println("├─────────────────────────────────────────────────┤");
-        System.out.println("│ New Count: 1,294 ✓ (accurate)                   │");
+        System.out.println("│ New Count: 1,294 (accurate)                      │");
         System.out.println("└─────────────────────────────────────────────────┘");
         
         // ReentrantLock Example
@@ -224,7 +224,7 @@ public class SessionSync {
         System.out.println("    }");
         System.out.println("}");
         
-        System.out.println("\\n✅ ReentrantLock Advantages:");
+        System.out.println("\\nReentrantLock Advantages:");
         System.out.println("   • tryLock() with timeout");
         System.out.println("   • lockInterruptibly() for cancellation");
         System.out.println("   • Fair locking option");
@@ -267,7 +267,7 @@ public class SynchronizationDemo {
         // PART 1: Race Condition Problem
         // ═══════════════════════════════════════════════════
         System.out.println("\\n" + "═".repeat(50));
-        System.out.println("❌ PART 1: RACE CONDITION (Without Sync)");
+        System.out.println("PART 1: RACE CONDITION (Without Sync)");
         System.out.println("═".repeat(50));
         
         System.out.println("\\n// Unsafe Bank Account");
@@ -286,13 +286,13 @@ public class SynchronizationDemo {
         System.out.println("\\n📋 Simulation: Two ATMs withdrawing $800 each");
         System.out.println("─".repeat(50));
         System.out.println("Initial Balance: $1000");
-        System.out.println("\\n[ATM-1] Checking balance: $1000 ✓");
-        System.out.println("[ATM-2] Checking balance: $1000 ✓");
+        System.out.println("\\n[ATM-1] Checking balance: $1000");
+        System.out.println("[ATM-2] Checking balance: $1000");
         System.out.println("[ATM-1] Processing withdrawal...");
         System.out.println("[ATM-2] Processing withdrawal...");
         System.out.println("[ATM-1] Withdrawn $800. New balance: $200");
         System.out.println("[ATM-2] Withdrawn $800. New balance: $200");
-        System.out.println("\\n❌ PROBLEM: $1600 withdrawn from $1000!");
+        System.out.println("\\nPROBLEM: $1600 withdrawn from $1000!");
         System.out.println("   Final Balance: $200 (should be $200 or -$600)");
         System.out.println("   Bank lost: $600");
         
@@ -300,7 +300,7 @@ public class SynchronizationDemo {
         // PART 2: Synchronized Method Solution
         // ═══════════════════════════════════════════════════
         System.out.println("\\n" + "═".repeat(50));
-        System.out.println("✅ PART 2: SYNCHRONIZED METHOD");
+        System.out.println("PART 2: SYNCHRONIZED METHOD");
         System.out.println("═".repeat(50));
         
         System.out.println("\\n// Safe Bank Account with synchronized method");
@@ -329,15 +329,15 @@ public class SynchronizationDemo {
         System.out.println("Initial Balance: $1000");
         System.out.println("\\n[ATM-1] Acquired lock");
         System.out.println("[ATM-2] Waiting for lock...");
-        System.out.println("[ATM-1] Checking balance: $1000 ✓");
+        System.out.println("[ATM-1] Checking balance: $1000");
         System.out.println("[ATM-1] Processing withdrawal...");
         System.out.println("[ATM-1] Withdrawn $800. Balance: $200");
         System.out.println("[ATM-1] Released lock");
         System.out.println("[ATM-2] Acquired lock");
         System.out.println("[ATM-2] Checking balance: $200");
-        System.out.println("[ATM-2] ❌ Insufficient funds!");
+        System.out.println("[ATM-2] Insufficient funds!");
         System.out.println("[ATM-2] Released lock");
-        System.out.println("\\n✅ SUCCESS: Only $800 withdrawn");
+        System.out.println("\\nSUCCESS: Only $800 withdrawn");
         System.out.println("   Final Balance: $200");
         
         // ═══════════════════════════════════════════════════
@@ -412,7 +412,7 @@ public class SynchronizationDemo {
         System.out.println("    }");
         System.out.println("}");
         
-        System.out.println("\\n✅ ReentrantLock Features:");
+        System.out.println("\\nReentrantLock Features:");
         System.out.println("   • tryLock() - Non-blocking attempt");
         System.out.println("   • tryLock(timeout) - Timeout-based");
         System.out.println("   • lockInterruptibly() - Cancellable");
@@ -425,7 +425,7 @@ public class SynchronizationDemo {
         System.out.println("⚠️ PART 5: DEADLOCK PREVENTION");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n❌ Deadlock Scenario:");
+        System.out.println("\\nDeadlock Scenario:");
         System.out.println("┌─────────────────────────────────────────────────┐");
         System.out.println("│ Thread-1: Lock A → Waiting for Lock B          │");
         System.out.println("│ Thread-2: Lock B → Waiting for Lock A          │");
@@ -433,7 +433,7 @@ public class SynchronizationDemo {
         System.out.println("│ Both threads waiting forever! 💀               │");
         System.out.println("└─────────────────────────────────────────────────┘");
         
-        System.out.println("\\n✅ Prevention: Lock Ordering");
+        System.out.println("\\nPrevention: Lock Ordering");
         System.out.println("// Always acquire locks in same order");
         System.out.println("public void transfer(Account from, Account to, double amount) {");
         System.out.println("    // Order by account ID to prevent deadlock");

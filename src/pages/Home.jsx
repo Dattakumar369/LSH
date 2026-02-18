@@ -38,7 +38,8 @@ function Home() {
     servlets: 'Build dynamic web applications with Java Servlets',
     jsp: 'Create powerful server-side web pages with JSP',
     hibernate: 'Master Hibernate ORM - mapping, relationships, caching, batch processing & more',
-    git: 'Learn Git version control and GitHub collaboration - branches, commits, pull requests & workflows'
+    git: 'Learn Git version control and GitHub collaboration - branches, commits, pull requests & workflows',
+    maven: 'Master Maven build automation - dependencies, plugins, multi-module projects, Spring Boot integration & more'
   };
 
   return (

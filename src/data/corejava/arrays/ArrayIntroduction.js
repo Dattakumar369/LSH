@@ -157,7 +157,7 @@ public class TransactionHistory {
         System.out.println("   Final Balance: $" + balance);
         
         // Array benefits
-        System.out.println("\\n✅ Why Arrays for Transactions:");
+        System.out.println("\\nWhy Arrays for Transactions:");
         System.out.println("   • Fast access by index O(1)");
         System.out.println("   • Efficient iteration");
         System.out.println("   • Memory efficient for fixed data");
@@ -215,7 +215,7 @@ public class GradeManagement {
         System.out.println("\\n📈 Overall Performance:");
         System.out.println("   Total: " + totalMarks + "/" + totalMax);
         System.out.println("   Percentage: " + String.format("%.2f", percentage) + "%");
-        System.out.println("   Result: " + (percentage >= 40 ? "PASS ✅" : "FAIL ❌"));
+        System.out.println("   Result: " + (percentage >= 40 ? "PASS" : "FAIL"));
     }
 }
 \`\`\`
@@ -386,15 +386,15 @@ public class ArrayOperationsDemo {
         System.out.println("⚠️ PART 6: COMMON PITFALLS");
         System.out.println("═".repeat(50));
         
-        System.out.println("\\n❌ ArrayIndexOutOfBoundsException:");
+        System.out.println("\\nArrayIndexOutOfBoundsException:");
         System.out.println("   int[] arr = new int[5];");
         System.out.println("   arr[5] = 10; // ERROR! Valid indices: 0-4");
         
-        System.out.println("\\n❌ NullPointerException:");
+        System.out.println("\\nNullPointerException:");
         System.out.println("   int[] arr = null;");
         System.out.println("   arr[0] = 10; // ERROR! Array not initialized");
         
-        System.out.println("\\n✅ Safe Access:");
+        System.out.println("\\nSafe Access:");
         System.out.println("   if (index >= 0 && index < arr.length) {");
         System.out.println("       value = arr[index];");
         System.out.println("   }");

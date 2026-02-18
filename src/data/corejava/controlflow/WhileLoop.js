@@ -52,9 +52,9 @@ public class ATMMachine {
             
             if (enteredPin == pin) {
                 authenticated = true;
-                System.out.println("✅ PIN Verified Successfully!");
+                System.out.println("PIN Verified Successfully!");
             } else {
-                System.out.println("❌ Incorrect PIN. Attempts: " + attempts + "/" + maxAttempts);
+                System.out.println("Incorrect PIN. Attempts: " + attempts + "/" + maxAttempts);
                 if (attempts >= maxAttempts) {
                     System.out.println("🔒 Card blocked! Contact bank.");
                     return;
@@ -92,12 +92,12 @@ public class ATMMachine {
                     double withdrawAmount = 500.00;
                     
                     if (withdrawAmount > balance) {
-                        System.out.println("   ❌ Insufficient funds!");
+                        System.out.println("   Insufficient funds!");
                     } else if (withdrawAmount > 1000) {
-                        System.out.println("   ❌ Daily limit exceeded!");
+                        System.out.println("   Daily limit exceeded!");
                     } else {
                         balance -= withdrawAmount;
-                        System.out.println("   ✅ Dispensing: $" + withdrawAmount);
+                        System.out.println("   Dispensing: $" + withdrawAmount);
                         System.out.println("   New Balance: $" + String.format("%,.2f", balance));
                     }
                     break;
@@ -106,7 +106,7 @@ public class ATMMachine {
                     System.out.println("\\n📥 CASH DEPOSIT");
                     double depositAmount = 1000.00;
                     balance += depositAmount;
-                    System.out.println("   ✅ Deposited: $" + depositAmount);
+                    System.out.println("   Deposited: $" + depositAmount);
                     System.out.println("   New Balance: $" + String.format("%,.2f", balance));
                     break;
                     
@@ -121,7 +121,7 @@ public class ATMMachine {
                     break;
                     
                 default:
-                    System.out.println("   ❌ Invalid option!");
+                    System.out.println("   Invalid option!");
             }
         }
         
@@ -188,7 +188,7 @@ public class GameSession {
                     kills++;
                     playerScore += 100;
                     playersAlive -= 5;
-                    System.out.println("   ✅ Enemy eliminated! +100 points");
+                    System.out.println("   Enemy eliminated! +100 points");
                     break;
                     
                 case 1: // Loot
@@ -262,7 +262,7 @@ public class RequestHandler {
         int maxRequests = 5; // Simulate 5 requests
         long startTime = System.currentTimeMillis();
         
-        System.out.println("✅ Server started on port 8080");
+        System.out.println("Server started on port 8080");
         System.out.println("📡 Listening for connections...");
         
         // Server loop
@@ -363,10 +363,10 @@ public class ATMMachine {
             
             if (enteredPin == correctPin) {
                 authenticated = true;
-                System.out.println("✅ Authentication Successful!");
+                System.out.println("Authentication Successful!");
                 System.out.println("\\nWelcome, " + accountHolder + "!");
             } else {
-                System.out.println("❌ Incorrect PIN");
+                System.out.println("Incorrect PIN");
                 if (attempts >= maxAttempts) {
                     System.out.println("\\n🔒 CARD BLOCKED");
                     System.out.println("Please contact customer service.");
@@ -418,17 +418,17 @@ public class ATMMachine {
                     
                     // Validation checks
                     if (withdrawAmount > balance) {
-                        System.out.println("❌ Insufficient balance!");
+                        System.out.println("Insufficient balance!");
                     } else if (withdrawAmount + withdrawnToday > dailyLimit) {
-                        System.out.println("❌ Daily limit exceeded!");
+                        System.out.println("Daily limit exceeded!");
                         System.out.println("   Remaining limit: $" + 
                             String.format("%,.2f", dailyLimit - withdrawnToday));
                     } else if (withdrawAmount % 20 != 0) {
-                        System.out.println("❌ Amount must be multiple of $20");
+                        System.out.println("Amount must be multiple of $20");
                     } else {
                         balance -= withdrawAmount;
                         withdrawnToday += withdrawAmount;
-                        System.out.println("✅ Please collect your cash");
+                        System.out.println("Please collect your cash");
                         System.out.println("   Dispensed: $" + String.format("%,.2f", withdrawAmount));
                         System.out.println("   New Balance: $" + String.format("%,.2f", balance));
                     }
@@ -447,7 +447,7 @@ public class ATMMachine {
                     System.out.println("Verifying authenticity...");
                     
                     balance += depositAmount;
-                    System.out.println("✅ Deposit successful!");
+                    System.out.println("Deposit successful!");
                     System.out.println("   Deposited: $" + String.format("%,.2f", depositAmount));
                     System.out.println("   New Balance: $" + String.format("%,.2f", balance));
                     break;
@@ -464,10 +464,10 @@ public class ATMMachine {
                     System.out.println("Amount: $" + transferAmount);
                     
                     if (transferAmount > balance) {
-                        System.out.println("❌ Insufficient balance!");
+                        System.out.println("Insufficient balance!");
                     } else {
                         balance -= transferAmount;
-                        System.out.println("✅ Transfer successful!");
+                        System.out.println("Transfer successful!");
                         System.out.println("   Transferred: $" + String.format("%,.2f", transferAmount));
                         System.out.println("   New Balance: $" + String.format("%,.2f", balance));
                     }
@@ -479,7 +479,7 @@ public class ATMMachine {
                     break;
                     
                 default:
-                    System.out.println("❌ Invalid selection!");
+                    System.out.println("Invalid selection!");
             }
             
             // Print receipt option

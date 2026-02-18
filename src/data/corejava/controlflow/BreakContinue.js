@@ -107,7 +107,7 @@ public class SearchEngine {
             
             // Stop when max results reached using break
             if (resultsFound >= maxResults) {
-                System.out.println("\\n✅ Showing top " + maxResults + " results");
+                System.out.println("\\nShowing top " + maxResults + " results");
                 break; // Exit loop
             }
         }
@@ -208,7 +208,7 @@ public class FraudDetection {
                 System.out.println("   ⚠️ FLAGGED: " + flagReason);
                 System.out.println("   → Sent for manual review");
             } else {
-                System.out.println("   ✅ APPROVED");
+                System.out.println("   APPROVED");
             }
         }
         
@@ -260,7 +260,7 @@ public class InventoryScanner {
             // Skip out of stock items - just count them
             if (quantities[i] == 0) {
                 outOfStockCount++;
-                System.out.println("\\n❌ " + products[i] + " - OUT OF STOCK");
+                System.out.println("\\n" + products[i] + " - OUT OF STOCK");
                 System.out.println("   Location: " + locations[i]);
                 
                 // Check if critical item
@@ -282,7 +282,7 @@ public class InventoryScanner {
                 System.out.println("   ⚠️ LOW STOCK - Reorder needed");
                 System.out.println("   Reorder Level: " + reorderLevels[i]);
             } else {
-                System.out.println("   ✅ Stock OK");
+                System.out.println("   Stock OK");
             }
             
             // Stop if too many issues found
@@ -445,7 +445,7 @@ public class FraudDetection {
             } else {
                 approved++;
                 totalApprovedAmount += amounts[i];
-                System.out.println("   ✅ APPROVED");
+                System.out.println("   APPROVED");
             }
         }
         
@@ -455,7 +455,7 @@ public class FraudDetection {
         System.out.println("╚════════════════════════════════════════════╝");
         System.out.println("\\nTransactions Processed: " + totalProcessed + "/" + txnIds.length);
         System.out.println("\\n📈 RESULTS:");
-        System.out.println("   ✅ Approved: " + approved + " ($" + String.format("%,.2f", totalApprovedAmount) + ")");
+        System.out.println("   Approved: " + approved + " ($" + String.format("%,.2f", totalApprovedAmount) + ")");
         System.out.println("   ⚠️ Flagged:  " + flagged);
         System.out.println("   🚫 Blocked:  " + blocked + " ($" + String.format("%,.2f", totalBlockedAmount) + ")");
         
@@ -465,7 +465,7 @@ public class FraudDetection {
             System.out.println("   Reason: " + freezeReason);
             System.out.println("   Action: Contact security team");
         } else {
-            System.out.println("   ✅ ACTIVE");
+            System.out.println("   ACTIVE");
         }
         
         // Risk Summary
