@@ -2840,9 +2840,20 @@ code {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 2fr 2fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
 }
 
 .footer-section h3 {
@@ -2887,6 +2898,47 @@ code {
   text-decoration: none;
 }
 
+/* Footer Learn Section - Multi-column layout for topics */
+.footer-learn {
+  min-width: 0; /* Prevent grid overflow */
+}
+
+.footer-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 1.5rem;
+}
+
+.footer-topics-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-topics-grid ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-topics-grid ul li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+  display: block;
+}
+
+.footer-topics-grid ul li a:hover {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-topics-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
@@ -2905,6 +2957,10 @@ code {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .footer-brand {
+    grid-column: 1;
   }
   
   .site-footer {
