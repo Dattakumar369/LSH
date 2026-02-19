@@ -1,4 +1,5 @@
 // JDBC Topics
+import jdbcProjectSetup from './JdbcProjectSetup';
 import jdbcIntroduction from './JdbcIntroduction';
 import jdbcDrivers from './JdbcDrivers';
 import jdbcConnectionSteps from './JdbcConnectionSteps';
@@ -14,6 +15,7 @@ export const jdbcTopics = {
   description: 'Java Database Connectivity - Connect Java applications with databases',
   icon: '🗄️',
   topics: [
+    jdbcProjectSetup,
     jdbcIntroduction,
     jdbcDrivers,
     jdbcConnectionSteps,
@@ -26,6 +28,7 @@ export const jdbcTopics = {
 };
 
 export {
+  jdbcProjectSetup,
   jdbcIntroduction,
   jdbcDrivers,
   jdbcConnectionSteps,
