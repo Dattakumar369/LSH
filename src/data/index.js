@@ -197,6 +197,31 @@ import mavenCommonErrors from './maven/MavenCommonErrors';
 import mavenVsGradle from './maven/MavenVsGradle';
 import mavenBestPractices from './maven/MavenBestPractices';
 
+// Spring Framework
+import {
+  springIntroduction,
+  springIOC,
+  springDI,
+  springBean,
+  springApplicationContext,
+  springConfigurationXML,
+  springConfigurationAnnotation,
+  springMVCDispatcherServlet,
+  springMVCController,
+  springMVCViewResolver,
+  springMVCModelAndView,
+  springProjectLoginStudentCRUD,
+  springDataIntroduction,
+  springDataRepositoryArchitecture,
+  springJDBCTemplate,
+  springDataCustomQueries,
+  springAOPIntroduction,
+  springAOPAdvancedPointcuts,
+  springAOPCustomAnnotations,
+  springAOPAspectOrdering,
+  springAOPWithSpringBoot
+} from './spring';
+
 export const courseStructure = {
   html: {
     title: "HTML",
@@ -657,8 +682,70 @@ export const courseStructure = {
         ]
       }
     }
+  },
+  spring: {
+    title: "Spring Framework",
+    icon: "🌱",
+    color: "#6DB33F",
+    sections: {
+      introduction: {
+        title: "Introduction to Spring",
+        topics: [
+          springIntroduction
+        ]
+      },
+      core: {
+        title: "Spring Core",
+        topics: [
+          springIOC,
+          springDI,
+          springBean,
+          springApplicationContext
+        ]
+      },
+      configuration: {
+        title: "Spring Configuration",
+        topics: [
+          springConfigurationXML,
+          springConfigurationAnnotation
+        ]
+      },
+      mvc: {
+        title: "Spring MVC",
+        topics: [
+          springMVCDispatcherServlet,
+          springMVCController,
+          springMVCViewResolver,
+          springMVCModelAndView
+        ]
+      },
+      project: {
+        title: "Spring Project",
+        topics: [
+          springProjectLoginStudentCRUD
+        ]
+      },
+      springData: {
+        title: "Spring Data",
+        topics: [
+          springDataIntroduction,
+          springDataRepositoryArchitecture,
+          springJDBCTemplate,
+          springDataCustomQueries
+        ]
+      },
+      aop: {
+        title: "Spring AOP",
+        topics: [
+          springAOPIntroduction,
+          springAOPAdvancedPointcuts,
+          springAOPCustomAnnotations,
+          springAOPAspectOrdering,
+          springAOPWithSpringBoot
+        ]
+      }
+    }
   }
-  // Future: spring, springmvc, springboot, springcloud
 };
 
 // Helper function to get all topics as flat array
